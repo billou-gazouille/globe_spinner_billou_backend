@@ -6,7 +6,6 @@ const activityBaseSchema = new mongoose.Schema({
     organisationName: String,   // ex: "surf-in-Nice"
     description: String,
     location: locationSchema,
-    price: Number,
 });
 
 const ActivityBase = mongoose.model('activityBases', activityBaseSchema);
