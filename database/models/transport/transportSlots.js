@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const transportSlotSchema = new mongoose.Schema({
+    transportBase: {type: ObjectId, ref: 'transportBases'},
     departure: {
         location: String,
         date: Date
@@ -12,10 +14,12 @@ const transportSlotSchema = new mongoose.Schema({
     firstClass: {  
         price: Number,
         maxNbSeats: Number,
+        availableSeats: [String],   // ex: ["23E", "18C", ...]
     },
     secondClass: {
         price: Number,
         maxNbSeats: Number,
+        availableSeats: [String],   // ex: ["53F", "58D", ...]
     },
 });
 

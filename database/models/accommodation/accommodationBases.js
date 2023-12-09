@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { locationSchema } = require('../commonSchemas');
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const accommodationBaseSchema = new mongoose.Schema({
     type: String,   // ex: "hotel", "airbnb", ...
@@ -12,6 +13,7 @@ const accommodationBaseSchema = new mongoose.Schema({
         email: String,
     },
     isBreakfastIncluded: Boolean,
+    possibleExtras: [{type: ObjectId, ref: 'accommodationExtras'}],
 });
 
 const AccommodationBase = mongoose.model('accommodationBases', accommodationBaseSchema);
