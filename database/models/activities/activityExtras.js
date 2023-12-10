@@ -5,6 +5,6 @@ const activityExtraSchema = new mongoose.Schema({
     price: Number, // additional cost
 });
 
-const ActivityExtra = mongoose.model('activityExtras', activityExtraSchema);
+const ActivityExtra = mongoose.model('activity_extras', activityExtraSchema);
 
 module.exports = ActivityExtra;

@@ -5,6 +5,6 @@ const transportExtraSchema = new mongoose.Schema({
     price: Number, // additional cost
 });
 
-const TransportExtra = mongoose.model('transportExtras', transportExtraSchema);
+const TransportExtra = mongoose.model('transport_extras', transportExtraSchema);
 
 module.exports = TransportExtra;

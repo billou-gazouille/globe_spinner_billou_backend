@@ -8,9 +8,9 @@ const activityBaseSchema = new mongoose.Schema({
     description: String,
     location: locationSchema,
     activityTags: [String],
-    possibleExtras: [{type: ObjectId, ref: 'activityExtras'}],
+    possibleExtras: [{type: ObjectId, ref: 'activity_extras'}],
 });
 
-const ActivityBase = mongoose.model('activityBases', activityBaseSchema);
+const ActivityBase = mongoose.model('activity_bases', activityBaseSchema);
 
 module.exports = ActivityBase;

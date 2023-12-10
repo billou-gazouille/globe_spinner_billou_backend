@@ -5,6 +5,6 @@ const accommodationExtraSchema = new mongoose.Schema({
     price: Number, // additional cost
 });
 
-const AccommodationExtra = mongoose.model('accommodationExtras', accommodationExtraSchema);
+const AccommodationExtra = mongoose.model('accommodation_extras', accommodationExtraSchema);
 
 module.exports = AccommodationExtra;

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const transportSlotSchema = new mongoose.Schema({
-    transportBase: {type: ObjectId, ref: 'transportBases'},
+    transportBase: {type: ObjectId, ref: 'transport_bases'},
     departure: {
         location: String,
         date: Date
@@ -23,6 +23,6 @@ const transportSlotSchema = new mongoose.Schema({
     },
 });
 
-const TransportSlot = mongoose.model('transportSlots', transportSlotSchema);
+const TransportSlot = mongoose.model('transport_slots', transportSlotSchema);
 
 module.exports = TransportSlot;

@@ -4,9 +4,9 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const transportBaseSchema = new mongoose.Schema({
     type: String,   // ex: "train", "flight", ...
     travelCompany: String,  // ex: "SNCF", ... 
-    possibleExtras: [{type: ObjectId, ref: 'transportExtras'}],
+    possibleExtras: [{type: ObjectId, ref: 'transport_extras'}],
 });
 
-const TransportBase = mongoose.model('transportBases', transportBaseSchema);
+const TransportBase = mongoose.model('transport_bases', transportBaseSchema);
 
 module.exports = TransportBase;

@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const journeySchema = new mongoose.Schema({
-    transportSlot: {type: ObjectId, ref: 'transportSlots'},
-    transportExtras: [{type: ObjectId, ref: 'transportExtras'}],
+    transportSlot: {type: ObjectId, ref: 'transport_slots'},
+    transportExtras: [{type: ObjectId, ref: 'transport_extras'}],
     seatNb: String,     // ex: "14E"
     class: String,      // ex: "second"
 });
@@ -15,12 +15,12 @@ const tripSchema = new mongoose.Schema({
     outboundJourney: journeySchema, // l'aller
     inboundJourney: journeySchema,  // le retour
     accommodation: {
-        accommodationSlot: {type: ObjectId, ref: 'accommodationSlots'},
-        accommodationExtras: [{type: ObjectId, ref: 'accommodationExtras'}],
+        accommodationSlot: {type: ObjectId, ref: 'accommodation_slots'},
+        accommodationExtras: [{type: ObjectId, ref: 'accommodation_extras'}],
     },
     activities: [{
-        activitySlot: {type: ObjectId, ref: 'activitySlots'},
-        activityExtras: [{type: ObjectId, ref: 'activityExtras'}],
+        activitySlot: {type: ObjectId, ref: 'activity_slots'},
+        activityExtras: [{type: ObjectId, ref: 'activity_extras'}],
     }],
     totalPaidAmount: Number,
 });

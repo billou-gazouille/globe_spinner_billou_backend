@@ -1,60 +1,22 @@
 require('dotenv').config();
 require('./database/connection');
-const mongoose = require('mongoose');
 
+// accommodation:
+const { generateAccommodationBase, clearAccommodationBases } = require(
+  './database/generate/accommodation/accommodationBase');
+const { generateAccommodationSlot, clearAccommodationSlots } = require(
+  './database/generate/accommodation/accommodationSlot');
+const { generateAccommodationExtra, clearAccommodationExtras } = require(
+  './database/generate/accommodation/accommodationExtra');
 
-require('./database/models/users');
-require('./database/models/destinations');
-require('./database/models/trips');
+// acitivties:
+const { generateActivityBase, clearActivityBases } = require(
+  './database/generate/activities/activityBase');
+const { generateActivitySlot, clearActivitySlots } = require(
+  './database/generate/activities/activitySlot');
+const { generateActivityExtra, clearActivityExtras } = require(
+  './database/generate/activities/activityExtra');
 
-require('./database/models/accommodation/accommodationBases');
-require('./database/models/accommodation/accommodationSlots');
-require('./database/models/accommodation/accommodationExtras');
-
-require('./database/models/activities/activityBases');
-require('./database/models/activities/activitySlots');
-require('./database/models/activities/activityExtras');
-
-require('./database/models/transport/transportBases');
-require('./database/models/transport/transportSlots');
-require('./database/models/transport/transportExtras');
-
-
-const findModelByCollectionName = (collectionName) => {
-    const models = mongoose.connection.models;
-    const model = models[collectionName];
-    return model;
-};
-
-const generateRandomValueForField = (field) => {
-    // This is a basic example; you might need to handle different field types accordingly
-    if (field.type === String) {
-      return getRandomString();
-    } else if (field.type === Number) {
-      return getRandomNumber();
-    }
-    // Handle other field types as needed
-  
-    return null; // Default to null if the field type is not handled
-  };
-
-// Helper functions for generating random values
-const getRandomString = () => Math.random().toString(36).substring(7);
-const getRandomNumber = () => Math.floor(Math.random() * 100);
-
-const generateRandomDocument = (model) => {
-    const schemaDefinition = model.schema.obj;
-    const document = {};
-  
-    for (const fieldName in schemaDefinition) {
-      if (schemaDefinition.hasOwnProperty(fieldName)) {
-        const field = schemaDefinition[fieldName];
-        document[fieldName] = generateRandomValueForField(field);
-      }
-    }
-  
-    return document;
-};
 
 const args = process.argv.slice(2);
 
@@ -62,19 +24,39 @@ const [collectionName, action, number] = args;
 
 //console.log(collectionName, action, number);
 
-const model = findModelByCollectionName(collectionName);
-
 if (action === 'create'){
-  console.log('creating...');
-  const promises = [];
+  const creations = [];
+
   for (let i = 0; i < number; i++) {
-    const obj = generateRandomDocument(model);
-    promises.push(model.create(obj));
+    let creation;
+
+    if (collectionName === 'accommodation_bases')
+      creation = generateAccommodationBase();
+    else if (collectionName === 'accommodation_extras')
+      creation = generateAccommodationExtra();
+    else if (collectionName === 'accommodation_slots')
+      creation = generateAccommodationSlot();
+
+    if (collectionName === 'activity_bases')
+      creation = generateActivityBase();
+    else if (collectionName === 'activity_extras')
+      creation = generateActivityExtra();
+    else if (collectionName === 'activity_slots')
+      creation = generateActivitySlot();
+
+    if (creation)
+      creations.push(creation);
   }
-  Promise.all(promises).then(e => console.log(`created ${e.length} ${collectionName}`));
+  if (creations.length > 0)
+    Promise.all(creations).then(e => console.log(`created ${e.length} ${collectionName}`));
 }
+
 else if (action === 'clear'){
-  console.log('deleting...');
-  model.deleteMany().then(e => console.log(`deleted ${e.deletedCount} ${collectionName}`));
+  if (collectionName === 'accommodation_bases')
+    clearAccommodationBases();
+  else if (collectionName === 'accommodation_extras')
+    clearAccommodationExtras();
+  else if (collectionName === 'accommodation_slots')
+    clearAccommodationSlots();
 }
 

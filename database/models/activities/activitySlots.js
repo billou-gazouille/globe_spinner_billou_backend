@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const activitySlotSchema = new mongoose.Schema({
-    activityBase: {type: ObjectId, ref: 'activityBases'},
+    activityBase: {type: ObjectId, ref: 'activity_bases'},
     startTime: Date,
     endTime: Date,
     maxNbPeople: Number,
@@ -10,6 +10,6 @@ const activitySlotSchema = new mongoose.Schema({
     price: Number,
 });
 
-const ActivitySlot = mongoose.model('activitySlots', activitySlotSchema);
+const ActivitySlot = mongoose.model('activity_slots', activitySlotSchema);
 
 module.exports = ActivitySlot;

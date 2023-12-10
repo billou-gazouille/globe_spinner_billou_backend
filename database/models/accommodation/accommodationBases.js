@@ -13,9 +13,9 @@ const accommodationBaseSchema = new mongoose.Schema({
         email: String,
     },
     isBreakfastIncluded: Boolean,
-    possibleExtras: [{type: ObjectId, ref: 'accommodationExtras'}],
+    possibleExtras: [{type: ObjectId, ref: 'accommodation_extras'}],
 });
 
-const AccommodationBase = mongoose.model('accommodationBases', accommodationBaseSchema);
+const AccommodationBase = mongoose.model('accommodation_bases', accommodationBaseSchema);
 
 module.exports = AccommodationBase;

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const accommodationSlotSchema = new mongoose.Schema({
-    accommodationBase: {type: ObjectId, ref: 'accommodationBases'},
+    accommodationBase: {type: ObjectId, ref: 'accommodation_bases'},
     roomNb: Number,
     from: Date,
     to: Date,
@@ -11,6 +11,6 @@ const accommodationSlotSchema = new mongoose.Schema({
     isTaken: Boolean,   // has this room already been booked by someone ?
 });
 
-const AccommodationSlot = mongoose.model('accommodationSlots', accommodationSlotSchema);
+const AccommodationSlot = mongoose.model('accommodation_slots', accommodationSlotSchema);
 
 module.exports = AccommodationSlot;
