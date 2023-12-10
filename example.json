@@ -1,0 +1,1454 @@
+{
+  "pagination": {
+    "total_result": 6432,
+    "start_page": 0,
+    "items_per_page": 25,
+    "items_on_page": 25
+  },
+  "feed_publishers": [
+    {
+      "id": "sncf",
+      "name": "SNCF PIV Production",
+      "url": "",
+      "license": "Private (unspecified)"
+    },
+    {
+      "id": "SNCF:sncf-piv",
+      "name": "SNCF PIV Production",
+      "url": "",
+      "license": "Private (unspecified)"
+    }
+  ],
+  "disruptions": [],
+  "context": {
+    "current_datetime": "20231210T201856",
+    "timezone": "Europe/Paris"
+  },
+  "stop_points": [
+    {
+      "id": "stop_point:SNCF:80254110:Tramway",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:80399048:LongDistanceTrain",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87688051:Coach",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87696682:Coach",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87747162:Coach",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87757005:Train",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87763342:LongDistanceTrain",
+      "name": "",
+      "label": "",
+      "coord": {
+        "lon": "0",
+        "lat": "0"
+      },
+      "links": [],
+      "stop_area": {
+        "id": "stop_area:SNCF:80399048",
+        "name": "",
+        "codes": [
+          {
+            "type": "secondary_id",
+            "value": "SNCF:80254110"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87688051"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87696682"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87747162"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87757005"
+          },
+          {
+            "type": "secondary_id",
+            "value": "SNCF:87763342"
+          },
+          {
+            "type": "source",
+            "value": "80254110"
+          },
+          {
+            "type": "source",
+            "value": "80399048"
+          },
+          {
+            "type": "source",
+            "value": "87688051"
+          },
+          {
+            "type": "source",
+            "value": "87696682"
+          },
+          {
+            "type": "source",
+            "value": "87747162"
+          },
+          {
+            "type": "source",
+            "value": "87757005"
+          },
+          {
+            "type": "source",
+            "value": "87763342"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "",
+        "coord": {
+          "lon": "0",
+          "lat": "0"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:80153452:LongDistanceTrain",
+      "name": "Aachen Hauptbahnhof",
+      "label": "Aachen Hauptbahnhof (Aachen)",
+      "coord": {
+        "lon": "6.0912",
+        "lat": "50.7675"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:osm:relation:62564",
+          "name": "Aachen",
+          "level": 8,
+          "zip_code": "",
+          "label": "Aachen",
+          "insee": "",
+          "coord": {
+            "lon": "6.083862",
+            "lat": "50.776351"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:80153452",
+        "name": "Aachen Hauptbahnhof",
+        "codes": [
+          {
+            "type": "source",
+            "value": "80153452"
+          },
+          {
+            "type": "uic",
+            "value": "80153452"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Aachen Hauptbahnhof (Aachen)",
+        "coord": {
+          "lon": "6.0912",
+          "lat": "50.7675"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87313759:Coach",
+      "name": "Abancourt",
+      "label": "Abancourt (Abancourt)",
+      "coord": {
+        "lon": "1.774297",
+        "lat": "49.685621"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:60001",
+          "name": "Abancourt",
+          "level": 8,
+          "zip_code": "60220",
+          "label": "Abancourt (60220)",
+          "insee": "60001",
+          "coord": {
+            "lon": "1.7646826",
+            "lat": "49.6977145"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87313759",
+        "name": "Abancourt",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87313759"
+          },
+          {
+            "type": "uic",
+            "value": "87313759"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Abancourt (Abancourt)",
+        "coord": {
+          "lon": "1.774297",
+          "lat": "49.685621"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87313759:Train",
+      "name": "Abancourt",
+      "label": "Abancourt (Abancourt)",
+      "coord": {
+        "lon": "1.774297",
+        "lat": "49.685621"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:60001",
+          "name": "Abancourt",
+          "level": 8,
+          "zip_code": "60220",
+          "label": "Abancourt (60220)",
+          "insee": "60001",
+          "coord": {
+            "lon": "1.7646826",
+            "lat": "49.6977145"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87313759",
+        "name": "Abancourt",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87313759"
+          },
+          {
+            "type": "uic",
+            "value": "87313759"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Abancourt (Abancourt)",
+        "coord": {
+          "lon": "1.774297",
+          "lat": "49.685621"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87481614:Tramway",
+      "name": "Abbaretz",
+      "label": "Abbaretz (Abbaretz)",
+      "coord": {
+        "lon": "-1.524289",
+        "lat": "47.555241"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:44001",
+          "name": "Abbaretz",
+          "level": 8,
+          "zip_code": "44170",
+          "label": "Abbaretz (44170)",
+          "insee": "44001",
+          "coord": {
+            "lon": "-1.5322775",
+            "lat": "47.5525545"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87481614",
+        "name": "Abbaretz",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87481614"
+          },
+          {
+            "type": "uic",
+            "value": "87481614"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Abbaretz (Abbaretz)",
+        "coord": {
+          "lon": "-1.524289",
+          "lat": "47.555241"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87317362:Coach",
+      "name": "Abbeville",
+      "label": "Abbeville (Abbeville)",
+      "coord": {
+        "lon": "1.824538",
+        "lat": "50.102175"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:80001",
+          "name": "Abbeville",
+          "level": 8,
+          "zip_code": "80100",
+          "label": "Abbeville (80100)",
+          "insee": "80001",
+          "coord": {
+            "lon": "1.8337029",
+            "lat": "50.1060835"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87317362",
+        "name": "Abbeville",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87317362"
+          },
+          {
+            "type": "uic",
+            "value": "87317362"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Abbeville (Abbeville)",
+        "coord": {
+          "lon": "1.824538",
+          "lat": "50.102175"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87317362:Train",
+      "name": "Abbeville",
+      "label": "Abbeville (Abbeville)",
+      "coord": {
+        "lon": "1.824538",
+        "lat": "50.102175"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:80001",
+          "name": "Abbeville",
+          "level": 8,
+          "zip_code": "80100",
+          "label": "Abbeville (80100)",
+          "insee": "80001",
+          "coord": {
+            "lon": "1.8337029",
+            "lat": "50.1060835"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87317362",
+        "name": "Abbeville",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87317362"
+          },
+          {
+            "type": "uic",
+            "value": "87317362"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Abbeville (Abbeville)",
+        "coord": {
+          "lon": "1.824538",
+          "lat": "50.102175"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87545269:Bus",
+      "name": "Ablon",
+      "label": "Ablon (Ablon-sur-Seine)",
+      "coord": {
+        "lon": "2.419213",
+        "lat": "48.725443"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:94001",
+          "name": "Ablon-sur-Seine",
+          "level": 8,
+          "zip_code": "94480",
+          "label": "Ablon-sur-Seine (94480)",
+          "insee": "94001",
+          "coord": {
+            "lon": "2.421509",
+            "lat": "48.7247582"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87545269",
+        "name": "Ablon",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87545269"
+          },
+          {
+            "type": "uic",
+            "value": "87545269"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Ablon (Ablon-sur-Seine)",
+        "coord": {
+          "lon": "2.419213",
+          "lat": "48.725443"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87545269:RapidTransit",
+      "name": "Ablon",
+      "label": "Ablon (Ablon-sur-Seine)",
+      "coord": {
+        "lon": "2.419213",
+        "lat": "48.725443"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:94001",
+          "name": "Ablon-sur-Seine",
+          "level": 8,
+          "zip_code": "94480",
+          "label": "Ablon-sur-Seine (94480)",
+          "insee": "94001",
+          "coord": {
+            "lon": "2.421509",
+            "lat": "48.7247582"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87545269",
+        "name": "Ablon",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87545269"
+          },
+          {
+            "type": "uic",
+            "value": "87545269"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Ablon (Ablon-sur-Seine)",
+        "coord": {
+          "lon": "2.419213",
+          "lat": "48.725443"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87191403:Coach",
+      "name": "Aboncourt Mairie",
+      "label": "Aboncourt Mairie (Aboncourt)",
+      "coord": {
+        "lon": "6.346603",
+        "lat": "49.261076"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:57001",
+          "name": "Aboncourt",
+          "level": 8,
+          "zip_code": "57920",
+          "label": "Aboncourt (57920)",
+          "insee": "57001",
+          "coord": {
+            "lon": "6.3463759",
+            "lat": "49.2602817"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87191403",
+        "name": "Aboncourt Mairie",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87191403"
+          },
+          {
+            "type": "uic",
+            "value": "87191403"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Aboncourt Mairie (Aboncourt)",
+        "coord": {
+          "lon": "6.346603",
+          "lat": "49.261076"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87749309:Coach",
+      "name": "Abriès-Ristolas Cayre de l'Ours",
+      "label": "Abriès-Ristolas Cayre de l'Ours (Abriès-Ristolas)",
+      "coord": {
+        "lon": "6.95706",
+        "lat": "44.77363"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:05001",
+          "name": "Abriès-Ristolas",
+          "level": 8,
+          "zip_code": "05460",
+          "label": "Abriès-Ristolas (05460)",
+          "insee": "05001",
+          "coord": {
+            "lon": "6.9279072",
+            "lat": "44.7940562"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87749309",
+        "name": "Abriès-Ristolas Cayre de l'Ours",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87749309"
+          },
+          {
+            "type": "uic",
+            "value": "87749309"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Abriès-Ristolas Cayre de l'Ours (Abriès-Ristolas)",
+        "coord": {
+          "lon": "6.95706",
+          "lat": "44.77363"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87677252:Coach",
+      "name": "Accolay Le Pont",
+      "label": "Accolay Le Pont (Deux Rivières)",
+      "coord": {
+        "lon": "3.709584",
+        "lat": "47.663798"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:89130",
+          "name": "Deux Rivières",
+          "level": 8,
+          "zip_code": "89460",
+          "label": "Deux Rivières (89460)",
+          "insee": "89130",
+          "coord": {
+            "lon": "3.6898895",
+            "lat": "47.6839847"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87677252",
+        "name": "Accolay Le Pont",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87677252"
+          },
+          {
+            "type": "uic",
+            "value": "87677252"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Accolay Le Pont (Deux Rivières)",
+        "coord": {
+          "lon": "3.709584",
+          "lat": "47.663798"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87386052:RapidTransit",
+      "name": "Achères Grand Cormier",
+      "label": "Achères Grand Cormier (Saint-Germain-en-Laye)",
+      "coord": {
+        "lon": "2.091962",
+        "lat": "48.955187"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:78551",
+          "name": "Saint-Germain-en-Laye",
+          "level": 8,
+          "zip_code": "78100;78112",
+          "label": "Saint-Germain-en-Laye (78100-78112)",
+          "insee": "78551",
+          "coord": {
+            "lon": "2.0942792",
+            "lat": "48.8990413"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87386052",
+        "name": "Achères Grand Cormier",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87386052"
+          },
+          {
+            "type": "uic",
+            "value": "87386052"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Achères Grand Cormier (Saint-Germain-en-Laye)",
+        "coord": {
+          "lon": "2.091962",
+          "lat": "48.955187"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87381657:RapidTransit",
+      "name": "Achères Ville",
+      "label": "Achères Ville (Achères)",
+      "coord": {
+        "lon": "2.07739",
+        "lat": "48.97011"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:78005",
+          "name": "Achères",
+          "level": 8,
+          "zip_code": "78260",
+          "label": "Achères (78260)",
+          "insee": "78005",
+          "coord": {
+            "lon": "2.0698106",
+            "lat": "48.9606321"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87381657",
+        "name": "Achères Ville",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87381657"
+          },
+          {
+            "type": "uic",
+            "value": "87381657"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Achères Ville (Achères)",
+        "coord": {
+          "lon": "2.07739",
+          "lat": "48.97011"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87342048:Train",
+      "name": "Achiet",
+      "label": "Achiet (Achiet-le-Grand)",
+      "coord": {
+        "lon": "2.780112",
+        "lat": "50.131919"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:62005",
+          "name": "Achiet-le-Grand",
+          "level": 8,
+          "zip_code": "62121",
+          "label": "Achiet-le-Grand (62121)",
+          "insee": "62005",
+          "coord": {
+            "lon": "2.7843609",
+            "lat": "50.1320114"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87342048",
+        "name": "Achiet",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87342048"
+          },
+          {
+            "type": "uic",
+            "value": "87342048"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Achiet (Achiet-le-Grand)",
+        "coord": {
+          "lon": "2.780112",
+          "lat": "50.131919"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87316455:Coach",
+      "name": "Achy",
+      "label": "Achy (Achy)",
+      "coord": {
+        "lon": "1.979053",
+        "lat": "49.55473"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:60004",
+          "name": "Achy",
+          "level": 8,
+          "zip_code": "60690",
+          "label": "Achy (60690)",
+          "insee": "60004",
+          "coord": {
+            "lon": "1.9790338",
+            "lat": "49.5567206"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87316455",
+        "name": "Achy",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87316455"
+          },
+          {
+            "type": "uic",
+            "value": "87316455"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Achy (Achy)",
+        "coord": {
+          "lon": "1.979053",
+          "lat": "49.55473"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87658856:Coach",
+      "name": "Adamswiller Lotissement la Forêt",
+      "label": "Adamswiller Lotissement la Forêt (Adamswiller)",
+      "coord": {
+        "lon": "7.208238",
+        "lat": "48.905635"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:67002",
+          "name": "Adamswiller",
+          "level": 8,
+          "zip_code": "67320",
+          "label": "Adamswiller (67320)",
+          "insee": "67002",
+          "coord": {
+            "lon": "7.2036488",
+            "lat": "48.9052331"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87658856",
+        "name": "Adamswiller Lotissement la Forêt",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87658856"
+          },
+          {
+            "type": "uic",
+            "value": "87658856"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Adamswiller Lotissement la Forêt (Adamswiller)",
+        "coord": {
+          "lon": "7.208238",
+          "lat": "48.905635"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87658922:Coach",
+      "name": "Adamswiller Mairie",
+      "label": "Adamswiller Mairie (Adamswiller)",
+      "coord": {
+        "lon": "7.201179",
+        "lat": "48.903835"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:67002",
+          "name": "Adamswiller",
+          "level": 8,
+          "zip_code": "67320",
+          "label": "Adamswiller (67320)",
+          "insee": "67002",
+          "coord": {
+            "lon": "7.2036488",
+            "lat": "48.9052331"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87658922",
+        "name": "Adamswiller Mairie",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87658922"
+          },
+          {
+            "type": "uic",
+            "value": "87658922"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Adamswiller Mairie (Adamswiller)",
+        "coord": {
+          "lon": "7.201179",
+          "lat": "48.903835"
+        },
+        "links": []
+      },
+      "equipments": []
+    },
+    {
+      "id": "stop_point:SNCF:87523548:Bus",
+      "name": "Aérogare Orly Sud - Noctilien",
+      "label": "Aérogare Orly Sud - Noctilien (Paray-Vieille-Poste)",
+      "coord": {
+        "lon": "2.369614",
+        "lat": "48.728829"
+      },
+      "links": [],
+      "administrative_regions": [
+        {
+          "id": "admin:fr:91479",
+          "name": "Paray-Vieille-Poste",
+          "level": 8,
+          "zip_code": "91550;94390",
+          "label": "Paray-Vieille-Poste (91550-94390)",
+          "insee": "91479",
+          "coord": {
+            "lon": "2.3637838",
+            "lat": "48.7126093"
+          }
+        }
+      ],
+      "stop_area": {
+        "id": "stop_area:SNCF:87523548",
+        "name": "Aérogare Orly Sud - Noctilien",
+        "codes": [
+          {
+            "type": "source",
+            "value": "87523548"
+          },
+          {
+            "type": "uic",
+            "value": "87523548"
+          }
+        ],
+        "timezone": "Europe/Paris",
+        "label": "Aérogare Orly Sud - Noctilien (Paray-Vieille-Poste)",
+        "coord": {
+          "lon": "2.369614",
+          "lat": "48.728829"
+        },
+        "links": []
+      },
+      "equipments": []
+    }
+  ],
+  "links": [
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}",
+      "templated": true,
+      "rel": "stop_points",
+      "type": "stop_points"
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_areas/{stop_area.id}",
+      "templated": true,
+      "rel": "stop_areas",
+      "type": "stop_area"
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}/route_schedules",
+      "rel": "route_schedules",
+      "type": "route_schedules",
+      "templated": true
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}/stop_schedules",
+      "rel": "stop_schedules",
+      "type": "stop_schedules",
+      "templated": true
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}/arrivals",
+      "rel": "arrivals",
+      "type": "arrivals",
+      "templated": true
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}/departures",
+      "rel": "departures",
+      "type": "departures",
+      "templated": true
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}/places_nearby",
+      "rel": "places_nearby",
+      "type": "places_nearby",
+      "templated": true
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points/{stop_points.id}/journeys",
+      "rel": "journeys",
+      "type": "journey",
+      "templated": true
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points?start_page=1",
+      "type": "next",
+      "templated": false
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points?start_page=257",
+      "type": "last",
+      "templated": false
+    },
+    {
+      "href": "https://api.navitia.io/v1/coverage/sncf/stop_points",
+      "type": "first",
+      "templated": false
+    }
+  ]
+}
