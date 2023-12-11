@@ -2,8 +2,12 @@ var express = require("express");
 var router = express.Router();
 const uid2 = require("uid2");
 const User = require("../database/models/users");
+const Trip = require("../database/models/trips");
 const { checkBody } = require("../modules/checkbody");
+const { saveTrip } = require("../modules/saveTrip");
 const bcrypt = require("bcrypt");
+
+let trips = [];
 
 router.post("/signup", (req, res) => {
   //console
@@ -62,6 +66,15 @@ router.get("/signin/:email/:password", (req, res) => {
 
 // ----------------- :/userToken ----------------
 
+// async function saveTrip(req) {
+//   const selectedTripIndex = Number(req.params.tripIndex);
+//   const userToken = req.params.userToken;
+
+//   const newTrip = new Trip(trips[selectedTripIndex]);
+//   const savedTrip = await newTrip.save();
+//   return { userToken, savedTrip };
+// }
+
 router.get("/:userToken/reservedTrips", (req, res) => {
   const token = req.params.userToken;
   User.findOne({ token })
@@ -69,6 +82,35 @@ router.get("/:userToken/reservedTrips", (req, res) => {
     .then((data) => {
       return res.json(data.reservedTrips);
     });
+});
+
+router.get("/:userToken/savedTrips", (req, res) => {
+  const token = req.params.userToken;
+  User.findOne({ token })
+    .populate("savedTrips")
+    .then((data) => {
+      return res.json(data.savedTrips);
+    });
+});
+
+router.post("/:userToken/trips/saveTrips/:tripIndex", async (req, res) => {
+  const { userToken, savedTrip } = await saveTrip(req);
+
+  const updateResult = await User.updateOne(
+    { token: userToken },
+    { $push: { savedTrips: savedTrip._id } }
+  );
+  return res.json({ savedTrip, updateResult });
+});
+
+router.post("/:userToken/trips/reserveTrips/:tripIndex", async (req, res) => {
+  const { userToken, savedTrip } = await saveTrip(req);
+
+  const updateResult = await User.updateOne(
+    { token: userToken },
+    { $push: { reservedTrips: savedTrip._id } }
+  );
+  return res.json({ savedTrip, updateResult });
 });
 
 module.exports = router;
