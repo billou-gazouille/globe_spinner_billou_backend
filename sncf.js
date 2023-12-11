@@ -20,7 +20,7 @@ function convertDateFormat(inputDate) {
 
 const fetchPlaces = (name) => {
     const url = `${baseURL}places/?q=${name}`;
-    //console.log(url);
+    console.log(url);
     return fetch(url, {
         headers: { 'Authorization': api_key }
     })
@@ -46,7 +46,7 @@ Promise.all([fetchPlaces(from), fetchPlaces(to)])
         //console.log('toId: ', toId);
         const dateTime = convertDateFormat(date);
         const url = `${baseURL}journeys/?from=${fromId}&to=${toId}&datetime=${dateTime}`;
-        //console.log(url);
+        console.log(url);
         fetch(url, {
             headers: { 'Authorization': api_key }
         })
