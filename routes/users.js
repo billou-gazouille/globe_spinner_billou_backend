@@ -6,18 +6,10 @@ const {checkBody} = require('../modules/checkbody');
 const bcrypt = require("bcrypt");
 
 
-// router.get("/login/:mail/:mdp", (req, res) => {
-//   const email = req.params.mail;
-//   const password = req.params.mdp;
-//   const token = uid2(32);
-// });
-
-
-
 
 router.post("/signup", (req, res) => {
   //console
-  if (!checkBody(req.body, ["email", "password"])) {
+  if (!checkBody(req.body, ["email", "password", "firstname", "lastname"])) {
     res.json({ result: false, error: "Missing or empty fields" });
     return;
   }
