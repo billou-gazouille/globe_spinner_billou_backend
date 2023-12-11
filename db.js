@@ -17,6 +17,15 @@ const { generateActivitySlot, clearActivitySlots } = require(
 const { generateActivityExtra, clearActivityExtras } = require(
   './database/generate/activities/activityExtra');
 
+// transports:
+const { generateTransportBase, clearTransportBases } = require(
+  './database/generate/transport/transportBase');
+const { generateTransportSlot, clearTransportSlots } = require(
+  './database/generate/transport/transportSlot');
+const { generateTransportExtra, clearTransportExtras } = require(
+  './database/generate/transport/transportExtra');
+
+
 
 const args = process.argv.slice(2);
 
@@ -43,6 +52,13 @@ if (action === 'create'){
       creation = generateActivityExtra();
     else if (collectionName === 'activity_slots')
       creation = generateActivitySlot();
+
+    if (collectionName === 'transport_bases')
+      creation = generateTransportBase();
+    else if (collectionName === 'transport_extras')
+      creation = generateTransportExtra();
+    else if (collectionName === 'transport_slots')
+      creation = generateTransportSlot();
 
     if (creation)
       creations.push(creation);
