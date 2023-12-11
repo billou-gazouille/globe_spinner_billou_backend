@@ -2,12 +2,9 @@ var express = require("express");
 var router = express.Router();
 const uid2 = require("uid2");
 const User = require("../database/models/users");
-const Trip = require("../database/models/trips");
 const { checkBody } = require("../modules/checkbody");
 const { saveTrip } = require("../modules/saveTrip");
 const bcrypt = require("bcrypt");
-
-let trips = [];
 
 router.post("/signup", (req, res) => {
   //console

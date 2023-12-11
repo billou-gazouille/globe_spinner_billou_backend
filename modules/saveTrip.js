@@ -1,3 +1,7 @@
+const Trip = require("../database/models/trips");
+const { tripA, tripB } = require("../exampleTrips");
+let trips = [tripA, tripB];
+
 async function saveTrip(req) {
   const selectedTripIndex = Number(req.params.tripIndex);
   const userToken = req.params.userToken;
