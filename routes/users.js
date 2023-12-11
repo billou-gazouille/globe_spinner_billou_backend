@@ -63,15 +63,6 @@ router.get("/signin/:email/:password", (req, res) => {
 
 // ----------------- :/userToken ----------------
 
-// async function saveTrip(req) {
-//   const selectedTripIndex = Number(req.params.tripIndex);
-//   const userToken = req.params.userToken;
-
-//   const newTrip = new Trip(trips[selectedTripIndex]);
-//   const savedTrip = await newTrip.save();
-//   return { userToken, savedTrip };
-// }
-
 router.get("/:userToken/reservedTrips", (req, res) => {
   const token = req.params.userToken;
   User.findOne({ token })
@@ -90,7 +81,7 @@ router.get("/:userToken/savedTrips", (req, res) => {
     });
 });
 
-router.post("/:userToken/trips/saveTrips/:tripIndex", async (req, res) => {
+router.post("/:userToken/saveTrip/:tripIndex", async (req, res) => {
   const { userToken, savedTrip } = await saveTrip(req);
 
   const updateResult = await User.updateOne(
@@ -100,7 +91,7 @@ router.post("/:userToken/trips/saveTrips/:tripIndex", async (req, res) => {
   return res.json({ savedTrip, updateResult });
 });
 
-router.post("/:userToken/trips/reserveTrips/:tripIndex", async (req, res) => {
+router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
   const { userToken, savedTrip } = await saveTrip(req);
 
   const updateResult = await User.updateOne(
