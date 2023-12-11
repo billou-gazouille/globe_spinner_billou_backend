@@ -1,5 +1,68 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
+const uid2 = require("uid2");
+const User = require('../database/models/users');
+const {checkBody} = require('../modules/checkbody');
+const bcrypt = require("bcrypt");
+
+
+
+router.post("/signup", (req, res) => {
+  //console
+  if (!checkBody(req.body, ["email", "password"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  console.log('body is OK');
+
+  User.findOne({ email: req.body.email }).then((data) => {
+    if (data === null) {
+      const hash = bcrypt.hashSync(req.body.password, 10);
+
+      const newUser = new User({
+        firstname:req.body.firstname,
+        lastname:req.body.lastname,
+        email: req.body.email,
+        password: hash,
+        token: uid2(32),
+        savedTrips:[],
+        reservedTrips:[],
+        bankCard: {
+          cardNumber: '',
+          expiryDate: new Date('9999-12-31T23:59:59'),
+          code: '' ,
+      },
+      });
+
+      newUser.save().then((newDoc) => {
+        res.json({ result: true, token: newDoc.token });
+      });
+    } else {
+      // User already exists in database
+      res.json({ result: false, error: "User already exists" });
+    }
+  });
+});
+
+
+
+router.get("/signin/:email/:password", (req, res) => {
+  if (!checkBody(req.params, ["email", "password"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  console.log('params are OK');
+
+  User.findOne({ email: req.params.email }).then((data) => {
+    if (data && bcrypt.compareSync(req.params.password, data.password)) {
+      res.json({ result: true, token: data.token });
+    } else {
+      res.json({ result: false, error: "User not found or wrong password" });
+    }
+  });
+});
 
 
 
