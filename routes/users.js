@@ -103,7 +103,7 @@ router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
 
 
 
-
+// addPaymentInfo
 
 router.post("/:userToken/addPaiyementInfo", async (req, res) => {
   try {
