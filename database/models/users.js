@@ -11,9 +11,10 @@ const userSchema = new mongoose.Schema({
   savedTrips: [{ type: ObjectId, ref: "trips" }],
   reservedTrips: [{ type: ObjectId, ref: "trips" }],
   bankCard: {
+    nameOnCard: String,
     cardNumber: String,
     expiryDate: Date,
-    code: String,
+    ccv: String,
   },
 });
 
