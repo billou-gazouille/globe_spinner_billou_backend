@@ -1,0 +1,320 @@
+
+{
+    "name": "Surfing Adventure 1",
+    "organisationName": "Surf-in-Nice",
+    "description": "Experience the thrill of riding the waves on the beautiful beaches of Nice.",
+    "location": {
+    "latitude": 43.7102,
+    "longitude": 7.2620
+    },
+    "activityTags": ["adventurous", "beachy", "exciting"],
+    "possibleExtras": []
+}
+{
+    "name": "Mountain Hiking 2",
+    "organisationName": "ExploreOutdoors",
+    "description": "Embark on a scenic hike through the breathtaking mountains surrounding the area.",
+    "location": {
+    "latitude": 45.9786,
+    "longitude": 6.9104
+    },
+    "activityTags": ["scenic", "adventurous", "nature"],
+    "possibleExtras": []
+}
+{
+    "name": "Cultural Tour 3",
+    "organisationName": "CityExplorers",
+    "description": "Immerse yourself in the rich cultural heritage of the city with our guided tour.",
+    "location": {
+    "latitude": 41.9028,
+    "longitude": 12.4964
+    },
+    "activityTags": ["cultural", "educational", "historic"],
+    "possibleExtras": []
+}
+{
+    "name": "Sailing Excursion 4",
+    "organisationName": "SailAway",
+    "description": "Set sail on a memorable sea adventure, exploring hidden coves and crystal-clear waters.",
+    "location": {
+    "latitude": 36.7783,
+    "longitude": 119.4179
+    },
+    "activityTags": ["sailing", "relaxing", "scenic"],
+    "possibleExtras": []
+}
+{
+    "name": "Food Tasting 5",
+    "organisationName": "TasteDelights",
+    "description": "Indulge your taste buds with a gastronomic journey, sampling local delicacies and flavors.",
+    "location": {
+    "latitude": 48.8566,
+    "longitude": 2.3522
+    },
+    "activityTags": ["culinary", "delicious", "foodie"],
+    "possibleExtras": []
+}
+{
+    "name": "Adventure Park Zip Line 6",
+    "organisationName": "ThrillSeekers",
+    "description": "Soar through the treetops on an exhilarating zip line adventure in our adventure park.",
+    "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194
+    },
+    "activityTags": ["thrilling", "adventurous", "outdoors"],
+    "possibleExtras": []
+}
+{
+    "name": "Wildlife Safari 7",
+    "organisationName": "SafariExplorations",
+    "description": "Witness majestic wildlife in their natural habitat on an exciting safari expedition.",
+    "location": {
+    "latitude": -3.4653,
+    "longitude": 36.5879
+    },
+    "activityTags": ["wildlife", "adventure", "nature"],
+    "possibleExtras": []
+}
+{
+    "name": "Hot Air Balloon Ride 8",
+    "organisationName": "SkyHighAdventures",
+    "description": "Soar high above the landscapes in a hot air balloon for a breathtaking aerial experience.",
+    "location": {
+    "latitude": 51.5074,
+    "longitude": -0.1278
+    },
+    "activityTags": ["aerial", "scenic", "romantic"],
+    "possibleExtras": []
+}
+{
+    "name": "Rock Climbing Expedition 9",
+    "organisationName": "PeakChallenge",
+    "description": "Conquer challenging rock faces and enjoy panoramic views on this thrilling climbing expedition.",
+    "location": {
+    "latitude": 40.7128,
+    "longitude": -74.0060
+    },
+    "activityTags": ["rockclimbing", "adventurous", "challenge"],
+    "possibleExtras": []
+}
+{
+    "name": "Art Workshop 10",
+    "organisationName": "CreativeCanvas",
+    "description": "Unleash your creativity in an inspiring art workshop led by experienced artists.",
+    "location": {
+    "latitude": 34.0522,
+    "longitude": -118.2437
+    },
+    "activityTags": ["creative", "artistic", "educational"],
+    "possibleExtras": []
+}
+{
+    "name": "Skydiving Experience 11",
+    "organisationName": "DareDevilsSky",
+    "description": "Feel the adrenaline rush as you free-fall from the sky with our expert skydiving instructors.",
+    "location": {
+    "latitude": 36.7783,
+    "longitude": -119.4179
+    },
+    "activityTags": ["skydiving", "adventurous", "thrilling"],
+    "possibleExtras": []
+}
+{
+    "name": "Historical Walking Tour 12",
+    "organisationName": "TimeTravelers",
+    "description": "Walk through history with our knowledgeable guides, exploring the city's iconic landmarks.",
+    "location": {
+    "latitude": 51.5099,
+    "longitude": -0.1334
+    },
+    "activityTags": ["historical", "educational", "walking"],
+    "possibleExtras": []
+}
+{
+    "name": "Scuba Diving Adventure 13",
+    "organisationName": "DeepBlueExplorers",
+    "description": "Dive into the depths of the ocean and discover a world of marine wonders.",
+    "location": {
+    "latitude": -20.348404,
+    "longitude": 57.552152
+    },
+    "activityTags": ["scuba", "underwater", "adventurous"],
+    "possibleExtras": []
+}
+{
+    "name": "Wine Tasting Tour 14",
+    "organisationName": "VineyardDiscoveries",
+    "description": "Savor the finest wines on a guided tour through picturesque vineyards and wineries.",
+    "location": {
+    "latitude": 38.2975,
+    "longitude": -122.2869
+    },
+    "activityTags": ["winetasting", "relaxing", "scenic"],
+    "possibleExtras": []
+}
+{
+    "name": "Paragliding Expedition 15",
+    "organisationName": "SkySoarAdventures",
+    "description": "Soar through the skies and enjoy breathtaking views on an unforgettable paragliding adventure.",
+    "location": {
+    "latitude": 46.8182,
+    "longitude": 8.2275
+    },
+    "activityTags": ["paragliding", "adventurous", "scenic"],
+    "possibleExtras": []
+}
+{
+    "name": "Yoga Retreat 16",
+    "organisationName": "ZenRetreats",
+    "description": "Rejuvenate your mind and body with daily yoga sessions in a tranquil and serene retreat.",
+    "location": {
+    "latitude": 40.7128,
+    "longitude": -74.0060
+    },
+    "activityTags": ["yoga", "relaxing", "wellness"],
+    "possibleExtras": []
+}
+{
+    "name": "Helicopter Tour 17",
+    "organisationName": "SkyHighChoppers",
+    "description": "Soar above the cityscape on a thrilling helicopter tour with panoramic views.",
+    "location": {
+    "latitude": 34.0522,
+    "longitude": -118.2437
+    },
+    "activityTags": ["helicopter", "scenic", "adventurous"],
+    "possibleExtras": []
+}
+{
+    "name": "Surfing Lessons 18",
+    "organisationName": "SurfProSchool",
+    "description": "Learn to ride the waves with expert surf instructors in a fun and supportive environment.",
+    "location": {
+    "latitude": -33.8688,
+    "longitude": 151.2093
+    },
+    "activityTags": ["surfing", "educational", "fun"],
+    "possibleExtras": []
+}
+{
+    "name": "Ziplining Adventure 19",
+    "organisationName": "ZipThrillAdventures",
+    "description": "Experience the excitement of ziplining through scenic landscapes on an adrenaline-pumping adventure.",
+    "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194
+    },
+    "activityTags": ["ziplining", "adventurous", "thrilling"],
+    "possibleExtras": []
+}
+{
+    "name": "Hot Springs Relaxation 20",
+    "organisationName": "AquaRetreats",
+    "description": "Unwind in natural hot springs, surrounded by stunning landscapes and serene ambiance.",
+    "location": {
+    "latitude": 36.1699,
+    "longitude": -115.1398
+    },
+    "activityTags": ["hotsprings", "relaxing", "natural"],
+    "possibleExtras": []
+}
+{
+    "name": "Bike Tour 21",
+    "organisationName": "CycleExplorations",
+    "description": "Explore the city and its scenic routes on a guided bike tour with experienced cyclists.",
+    "location": {
+    "latitude": 40.7128,
+    "longitude": -74.0060
+    },
+    "activityTags": ["biking", "scenic", "adventurous"],
+    "possibleExtras": []
+}
+{
+    "name": "Cooking Class 22",
+    "organisationName": "CulinaryCrafts",
+    "description": "Learn the art of cooking with professional chefs, creating delicious dishes from scratch.",
+    "location": {
+    "latitude": 34.0522,
+    "longitude": -118.2437
+    },
+    "activityTags": ["cooking", "culinary", "educational"],
+    "possibleExtras": []
+}
+{
+    "name": "Horseback Riding Adventure 23",
+    "organisationName": "TrailBlazersRanch",
+    "description": "Embark on a horseback riding adventure through scenic trails and picturesque landscapes.",
+    "location": {
+    "latitude": 36.7783,
+    "longitude": -119.4179
+    },
+    "activityTags": ["horsebackriding", "adventurous", "scenic"],
+    "possibleExtras": []
+}
+{
+    "name": "Fishing Expedition 24",
+    "organisationName": "DeepBlueFishing",
+    "description": "Enjoy a day of fishing in the deep blue sea, surrounded by nature's beauty and tranquility.",
+    "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194
+    },
+    "activityTags": ["fishing", "adventurous", "relaxing"],
+    "possibleExtras": []
+}
+{
+    "name": "Kayaking Adventure 25",
+    "organisationName": "PaddleQuest",
+    "description": "Navigate through scenic waterways on a thrilling kayaking adventure with expert guides.",
+    "location": {
+    "latitude": 34.0522,
+    "longitude": -118.2437
+    },
+    "activityTags": ["kayaking", "adventurous", "scenic"],
+    "possibleExtras": []
+}
+{
+    "name": "Skiing Retreat 26",
+    "organisationName": "SnowyEscapes",
+    "description": "Experience the thrill of skiing on powdery slopes and unwind in a cozy mountain retreat.",
+    "location": {
+    "latitude": 46.8182,
+    "longitude": 8.2275
+    },
+    "activityTags": ["skiing", "adventurous", "winter"],
+    "possibleExtras": []
+}
+{
+    "name": "Photography Workshop 27",
+    "organisationName": "CaptureVisions",
+    "description": "Hone your photography skills with expert guidance in picturesque locations.",
+    "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194
+    },
+    "activityTags": ["photography", "educational", "scenic"],
+    "possibleExtras": []
+}
+{
+    "name": "Paddleboarding Excursion 28",
+    "organisationName": "AquaAdventures",
+    "description": "Glide across calm waters on a paddleboard, enjoying the serenity of the surroundings.",
+    "location": {
+    "latitude": 33.6844,
+    "longitude": -117.8265
+    },
+    "activityTags": ["paddleboarding", "relaxing", "adventurous"],
+    "possibleExtras": []
+}
+{
+    "name": "Zip Lining Canopy Tour 29",
+    "organisationName": "CanopyThrills",
+    "description": "Soar through the treetops on an exhilarating zip lining canopy tour in a lush forest.",
+    "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194
+    },
+    "activityTags": ["ziplining", "adventurous", "thrilling"],
+    "possibleExtras": []
+}

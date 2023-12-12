@@ -15,11 +15,11 @@ const generateTransportBase = async () => {
     return TransportBase.create(obj);
 };
 
-const clearTransportBase = () => {
+const clearTransportBases = () => {
     return TransportBase.deleteMany();
 };
 
 module.exports = { 
     generateTransportBase,
-    clearTransportBase,
+    clearTransportBases,
 };
