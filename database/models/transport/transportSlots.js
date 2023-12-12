@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
 const ObjectId = mongoose.Schema.Types.ObjectId;
 require("./transportBases");
+require("../destinations");
 
 const transportSlotSchema = new mongoose.Schema({
   transportBase: { type: ObjectId, ref: "transport_bases" },
   departure: {
-    location: String,
+    place: { type: ObjectId, ref: "destinations" },
     date: Date,
   },
   arrival: {
-    location: String,
+    place: { type: ObjectId, ref: "destinations" },
     date: Date,
   },
   firstClass: {
