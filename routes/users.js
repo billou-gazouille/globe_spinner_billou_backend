@@ -44,16 +44,16 @@ router.post("/signup", (req, res) => {
   });
 });
 
-router.get("/signin/:email/:password", (req, res) => {
-  if (!checkBody(req.params, ["email", "password"])) {
+router.get("/signin", (req, res) => {
+  if (!checkBody(req.body, ["email", "password"])) {
     res.json({ result: false, error: "Missing or empty fields" });
     return;
   }
 
-  console.log("params are OK");
+  console.log("body is OK");
 
-  User.findOne({ email: req.params.email }).then((data) => {
-    if (data && bcrypt.compareSync(req.params.password, data.password)) {
+  User.findOne({ email: req.body.email }).then((data) => {
+    if (data && bcrypt.compareSync(req.body.password, data.password)) {
       res.json({ result: true, token: data.token });
     } else {
       res.json({ result: false, error: "User not found or wrong password" });
