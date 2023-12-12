@@ -1,8 +1,9 @@
 require("dotenv").config();
-require("../../connection");
+require("./database/connection");
 
-const AccommodationRoom = require("../../models/accommodation/accommodationRooms");
-const AccommodationBase = require("../../models/accommodation/accommodationBases");
+const AccommodationRoom = require("./database/models/accommodation/accommodationRooms");
+const AccommodationBase = require("./database/models/accommodation/accommodationBases");
+
 function generateRoomNumber() {
   const randomNbr = Math.floor(Math.random() * 99) + 1;
   const randomLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -40,16 +41,7 @@ const generateAccommodationRoom = async () => {
       }
     }
   }
-  return console.log("end");
+  return "end";
 };
 
 generateAccommodationRoom();
-
-const clearAccommodationRooms = () => {
-  return AccommodationRoom.deleteMany();
-};
-
-module.exports = {
-  generateAccommodationRoom,
-  clearAccommodationRooms,
-};
