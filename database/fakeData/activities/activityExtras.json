@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Picnic Basket",
+    "price": 8
+  },
+  {
+    "name": "Audio Guide",
+    "price": 12
+  },
+  {
+    "name": "Gear Rental",
+    "price": 15
+  },
+  {
+    "name": "With Guide",
+    "price": 10
+  },
+  {
+    "name": "Snack Pack",
+    "price": 5
+  },
+  {
+    "name": "Photography Service",
+    "price": 18
+  },
+  {
+    "name": "Map and Compass",
+    "price": 20
+  },
+  {
+    "name": "Exclusive Access Pass",
+    "price": 28
+  },
+  {
+    "name": "Spa Kit",
+    "price": 30
+  },
+  {
+    "name": "Rain Poncho",
+    "price": 15
+  },
+  {
+    "name": "Live Music Playlist",
+    "price": 16
+  },
+  {
+    "name": "Sunset Viewing Guide",
+    "price": 14
+  },
+  {
+    "name": "Art Supplies",
+    "price": 8
+  },
+  {
+    "name": "Bike Helmet Rental",
+    "price": 10
+  },
+  {
+    "name": "Cooking Class Recipe Booklet",
+    "price": 12
+  },
+  {
+    "name": "Nature Walk Guidebook",
+    "price": 9
+  },
+  {
+    "name": "Virtual Reality Viewer",
+    "price": 18
+  },
+  {
+    "name": "Zipline Equipment",
+    "price": 12
+  },
+  {
+    "name": "Candlelit Dinner Setup",
+    "price": 26
+  },
+  {
+    "name": "Yoga Mat Rental",
+    "price": 6
+  },
+  {
+    "name": "Underwater Photography Tips",
+    "price": 11
+  },
+  {
+    "name": "Wine Tasting Guide",
+    "price": 24
+  },
+  {
+    "name": "City Walking Map",
+    "price": 4
+  },
+  {
+    "name": "Postcard Set",
+    "price": 5
+  },
+  {
+    "name": "Reusable Water Bottle",
+    "price": 3
+  },
+  {
+    "name": "Local Snack Sampler",
+    "price": 2
+  },
+  {
+    "name": "Guided Meditation Session",
+    "price": 10
+  },
+  {
+    "name": "Outdoor Yoga Class",
+    "price": 15
+  },
+  {
+    "name": "Bonfire Kit",
+    "price": 8
+  },
+  {
+    "name": "Stargazing Map",
+    "price": 6
+  }
+]
