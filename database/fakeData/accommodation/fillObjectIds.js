@@ -8,6 +8,7 @@ const AccommodationBase = require('../../models/accommodation/accommodationBases
 const AccommodationSlot = require('../../models/accommodation/accommodationSlots'); 
 const AccommodationExtra = require('../../models/accommodation/accommodationExtras'); 
 
+
 function getRandomSubset(arr, maxLength) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -25,9 +26,9 @@ function getRandomIndex(maxIndex){
 Promise.all([
     AccommodationBase.find(),
     AccommodationSlot.find(),
-    AccommodationExtra.find()
+    AccommodationExtra.find(),
 ])
-.then(([bases, slots, extras]) => {
+.then(([bases, slots, extras, destinations]) => {
     bases.forEach(base => {
         const randomExtras = getRandomSubset(extras, 5);
         const extraIds = randomExtras.map(extra => new ObjectId(extra._id));
