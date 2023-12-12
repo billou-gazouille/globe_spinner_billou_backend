@@ -1,0 +1,42 @@
+[
+  {
+    "name": "WiFi Access",
+    "price": 5.99
+  },
+  {
+    "name": "Breakfast Buffet",
+    "price": 12.99
+  },
+  {
+    "name": "Airport Shuttle",
+    "price": 20.0
+  },
+  {
+    "name": "Spa Package",
+    "price": 45.5
+  },
+  {
+    "name": "Late Checkout",
+    "price": 10.0
+  },
+  {
+    "name": "Room Upgrade",
+    "price": 25.0
+  },
+  {
+    "name": "Parking Pass",
+    "price": 8.5
+  },
+  {
+    "name": "Fitness Center Access",
+    "price": 7.99
+  },
+  {
+    "name": "Welcome Gift Basket",
+    "price": 15.0
+  },
+  {
+    "name": "Bike Rental",
+    "price": 15.0
+  }
+]

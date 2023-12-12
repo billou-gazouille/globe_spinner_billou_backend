@@ -1,0 +1,3611 @@
+[
+  {
+    "type": "hotel",
+    "name": "Luxury Parisian Hotel",
+    "description": "Elegant hotel with a prime location in Paris",
+    "location": {
+      "latitude": 48.8594,
+      "longitude": 2.2944
+    },
+    "address": "1 Avenue des Champs-Élysées, Paris, France",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "reservations@luxuryparishotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45916"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Parisian Apartment",
+    "description": "Quaint apartment in the heart of Paris",
+    "location": {
+      "latitude": 48.8647,
+      "longitude": 2.3345
+    },
+    "address": "15 Rue de Rivoli, Paris, France",
+    "contactInfo": {
+      "name": "Alice Dupont",
+      "email": "alice.dupont@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Eiffel View Suites",
+    "description": "Breathtaking views of the Eiffel Tower from every suite",
+    "location": {
+      "latitude": 48.8556,
+      "longitude": 2.2986
+    },
+    "address": "10 Quai Branly, Paris, France",
+    "contactInfo": {
+      "name": "Reservations Desk",
+      "email": "info@eiffelviewsuites.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Montmartre Artist Loft",
+    "description": "Artistic loft with a view of Montmartre",
+    "location": {
+      "latitude": 48.8865,
+      "longitude": 2.343
+    },
+    "address": "8 Rue Norvins, Paris, France",
+    "contactInfo": {
+      "name": "Sophie Leclerc",
+      "email": "sophie.artist loft@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45918",
+      "65783d2d5d1d367f59d4591a"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Champs-Élysées Grand Hotel",
+    "description": "Grandeur on the famous Champs-Élysées avenue",
+    "location": {
+      "latitude": 48.8708,
+      "longitude": 2.3082
+    },
+    "address": "25 Avenue des Champs-Élysées, Paris, France",
+    "contactInfo": {
+      "name": "Grand Hotel Reception",
+      "email": "info@champselyseesgrandhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45916"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Seine River View Apartment",
+    "description": "Scenic views of the Seine River from your apartment",
+    "location": {
+      "latitude": 48.8561,
+      "longitude": 2.3158
+    },
+    "address": "5 Quai Anatole France, Paris, France",
+    "contactInfo": {
+      "name": "Lucas Martin",
+      "email": "lucas.riverview@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Opera District Luxury Hotel",
+    "description": "Opulent hotel in the heart of the Opera district",
+    "location": {
+      "latitude": 48.8706,
+      "longitude": 2.3321
+    },
+    "address": "18 Rue de la Paix, Paris, France",
+    "contactInfo": {
+      "name": "Reservation Desk",
+      "email": "reservations@operadistricthotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Marais Cozy Studio",
+    "description": "Cozy studio in the historic Marais neighborhood",
+    "location": {
+      "latitude": 48.857,
+      "longitude": 2.3597
+    },
+    "address": "20 Rue de la Verrerie, Paris, France",
+    "contactInfo": {
+      "name": "Isabelle Dubois",
+      "email": "isabelle.cozystudio@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45919",
+      "65783d2d5d1d367f59d4591a"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Saint-Germain Elegance Hotel",
+    "description": "Elegant accommodations in the charming Saint-Germain area",
+    "location": {
+      "latitude": 48.853,
+      "longitude": 2.3386
+    },
+    "address": "10 Rue de Rennes, Paris, France",
+    "contactInfo": {
+      "name": "Elegance Hotel Reception",
+      "email": "info@elegancehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Latin Quarter Historic Loft",
+    "description": "Historic loft in the vibrant Latin Quarter",
+    "location": {
+      "latitude": 48.8488,
+      "longitude": 2.3484
+    },
+    "address": "5 Rue de la Huchette, Paris, France",
+    "contactInfo": {
+      "name": "Carlos Rodriguez",
+      "email": "carlos.historicloft@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Imperial Colosseum Hotel",
+    "description": "Regal hotel with a view of the Colosseum",
+    "location": {
+      "latitude": 41.8902,
+      "longitude": 12.4924
+    },
+    "address": "Via di San Gregorio 30, Rome, Italy",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "reservations@imperialcolosseumhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45916"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Trastevere Artistic Loft",
+    "description": "Art-filled loft in the charming Trastevere district",
+    "location": {
+      "latitude": 41.8876,
+      "longitude": 12.4683
+    },
+    "address": "Via della Lungara 17, Rome, Italy",
+    "contactInfo": {
+      "name": "Sophia Rossi",
+      "email": "sophia.artistloft@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Vatican View Suites",
+    "description": "Stunning views of the Vatican from every suite",
+    "location": {
+      "latitude": 41.9022,
+      "longitude": 12.4536
+    },
+    "address": "Via della Conciliazione 10, Rome, Italy",
+    "contactInfo": {
+      "name": "Reservations Desk",
+      "email": "info@vaticanviewsuites.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Roman Forum Terrace Apartment",
+    "description": "Terrace apartment overlooking the Roman Forum",
+    "location": {
+      "latitude": 41.8924,
+      "longitude": 12.4872
+    },
+    "address": "Via di San Gregorio 22, Rome, Italy",
+    "contactInfo": {
+      "name": "Lucas Martin",
+      "email": "lucas.terraceapartment@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Canal-side Boutique Hotel",
+    "description": "Quaint hotel with a view of Amsterdam's canals",
+    "location": {
+      "latitude": 52.3676,
+      "longitude": 4.9041
+    },
+    "address": "Prinsengracht 267, Amsterdam, Netherlands",
+    "contactInfo": {
+      "name": "Boutique Hotel Reservations",
+      "email": "info@canalboutiquehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Amsterdam Artist Retreat",
+    "description": "Artistic retreat in the heart of Amsterdam",
+    "location": {
+      "latitude": 52.372,
+      "longitude": 4.8924
+    },
+    "address": "Keizersgracht 123, Amsterdam, Netherlands",
+    "contactInfo": {
+      "name": "Emma van der Berg",
+      "email": "emma.artistretreat@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Tulip Garden Resort",
+    "description": "Relaxing resort surrounded by tulip gardens",
+    "location": {
+      "latitude": 52.3697,
+      "longitude": 4.891
+    },
+    "address": "Nieuwezijds Voorburgwal 120, Amsterdam, Netherlands",
+    "contactInfo": {
+      "name": "Resort Reservations",
+      "email": "reservations@tulipgardenresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45916"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Canal View Apartment",
+    "description": "Sleek apartment with views of Amsterdam's canals",
+    "location": {
+      "latitude": 52.377,
+      "longitude": 4.8956
+    },
+    "address": "Herengracht 456, Amsterdam, Netherlands",
+    "contactInfo": {
+      "name": "Alexandra Russo",
+      "email": "alexandra.modernapartment@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Royal Edinburgh Hotel",
+    "description": "Regal hotel in the heart of Edinburgh",
+    "location": {
+      "latitude": 55.9544,
+      "longitude": -3.1883
+    },
+    "address": "Princes Street, Edinburgh, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reception",
+      "email": "info@royaledinburghhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Old Town Apartment",
+    "description": "Charming apartment in Edinburgh's historic Old Town",
+    "location": {
+      "latitude": 55.95,
+      "longitude": -3.1865
+    },
+    "address": "Castlehill, Edinburgh, United Kingdom",
+    "contactInfo": {
+      "name": "Eleanor Robertson",
+      "email": "eleanor.oldtownapartment@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Edinburgh Castle View Suites",
+    "description": "Spectacular views of Edinburgh Castle from every suite",
+    "location": {
+      "latitude": 55.9486,
+      "longitude": -3.1999
+    },
+    "address": "Castle Terrace, Edinburgh, United Kingdom",
+    "contactInfo": {
+      "name": "Reservations Desk",
+      "email": "reservations@castleviewsuites.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45916"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Calton Hill Penthouse",
+    "description": "Penthouse apartment with panoramic views from Calton Hill",
+    "location": {
+      "latitude": 55.955,
+      "longitude": -3.1829
+    },
+    "address": "Regent Road, Edinburgh, United Kingdom",
+    "contactInfo": {
+      "name": "Andrew Mitchell",
+      "email": "andrew.caltonhillpenthouse@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Porto Riverside Hotel",
+    "description": "Riverside hotel with picturesque views",
+    "location": {
+      "latitude": 41.1579,
+      "longitude": -8.6291
+    },
+    "address": "Avenida Gustavo Eiffel 42, Porto, Portugal",
+    "contactInfo": {
+      "name": "Hotel Reception",
+      "email": "info@portoriversidehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Ribeira Townhouse",
+    "description": "Charming townhouse in Porto's historic Ribeira district",
+    "location": {
+      "latitude": 41.1415,
+      "longitude": -8.6158
+    },
+    "address": "Rua da Ribeira 10, Porto, Portugal",
+    "contactInfo": {
+      "name": "Ana Silva",
+      "email": "ana.ribeiratownhouse@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45916",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Porto Bayview Suites",
+    "description": "Bayview suites with stunning ocean vistas",
+    "location": {
+      "latitude": 41.1426,
+      "longitude": -8.611
+    },
+    "address": "Avenida Dom Afonso Henriques 88, Porto, Portugal",
+    "contactInfo": {
+      "name": "Reservations Desk",
+      "email": "reservations@bayviewsuites.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Douro River Loft",
+    "description": "Loft with panoramic views of the Douro River",
+    "location": {
+      "latitude": 41.1424,
+      "longitude": -8.6116
+    },
+    "address": "Rua do Duque 25, Porto, Portugal",
+    "contactInfo": {
+      "name": "Miguel Oliveira",
+      "email": "miguel.douroriverloft@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Andalusian Palace Hotel",
+    "description": "Opulent hotel with a touch of Andalusian charm",
+    "location": {
+      "latitude": 37.3886,
+      "longitude": -5.9823
+    },
+    "address": "Calle Sierpes, Seville, Spain",
+    "contactInfo": {
+      "name": "Hotel Reception",
+      "email": "info@andalusianpalacehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45918"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Barrio Santa Cruz Apartment",
+    "description": "Quaint apartment in the historic Santa Cruz district",
+    "location": {
+      "latitude": 37.3862,
+      "longitude": -5.9842
+    },
+    "address": "Callejon del Agua 15, Seville, Spain",
+    "contactInfo": {
+      "name": "Maria Rodriguez",
+      "email": "maria.santacruzapartment@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45915",
+      "65783d2d5d1d367f59d45919"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Seville Riverside Grand Hotel",
+    "description": "Grand hotel with views of the Guadalquivir River",
+    "location": {
+      "latitude": 37.3938,
+      "longitude": -5.9822
+    },
+    "address": "Paseo de Cristobal Colon 22, Seville, Spain",
+    "contactInfo": {
+      "name": "Reservations Desk",
+      "email": "reservations@riversidegrandhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45913",
+      "65783d2d5d1d367f59d45916"
+    ]
+  },
+  {
+    "type": "airbnb",
+    "name": "Triana Artsy Loft",
+    "description": "Artsy loft in the vibrant Triana neighborhood",
+    "location": {
+      "latitude": 37.3846,
+      "longitude": -6.0015
+    },
+    "address": "Calle Betis 45, Seville, Spain",
+    "contactInfo": {
+      "name": "Carlos Garcia",
+      "email": "carlos.trianaartsyloft@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": [
+      "65783d2d5d1d367f59d45911",
+      "65783d2d5d1d367f59d45914",
+      "65783d2d5d1d367f59d45917"
+    ]
+  },
+  {
+    "type": "hotel",
+    "name": "Luxury Hotel Santorini",
+    "description": "Experience unparalleled luxury with breathtaking views.",
+    "location": {
+      "latitude": 36.3932,
+      "longitude": 25.4615
+    },
+    "address": "123 Oceanfront Avenue, Santorini, Greece",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "reservations@luxuryhotelsantorini.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45914"]
+  },
+  {
+    "type": "airbnb",
+    "name": "Seaside Villa Santorini",
+    "description": "Charming villa with direct access to the beach.",
+    "location": {
+      "latitude": 36.397,
+      "longitude": 25.455
+    },
+    "address": "456 Coastal Lane, Santorini, Greece",
+    "contactInfo": {
+      "name": "Villa Host",
+      "email": "host@seasidevillasantorini.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45917"]
+  },
+  {
+    "type": "hotel",
+    "name": "Prague City Center Hotel",
+    "description": "A modern hotel in the heart of Prague's historic city center.",
+    "location": {
+      "latitude": 50.0755,
+      "longitude": 14.4378
+    },
+    "address": "789 Historical Square, Prague, Czech Republic",
+    "contactInfo": {
+      "name": "Reservation Desk",
+      "email": "reservations@praguehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45915"]
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Apartment in Prague",
+    "description": "Charming apartment with a view of Prague Castle.",
+    "location": {
+      "latitude": 50.079,
+      "longitude": 14.42
+    },
+    "address": "101 Castle View Street, Prague, Czech Republic",
+    "contactInfo": {
+      "name": "Apartment Host",
+      "email": "host@pragueapartment.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45916"]
+  },
+  {
+    "type": "hotel",
+    "name": "Vienna Grand Hotel",
+    "description": "Elegant hotel in the heart of Vienna's cultural district.",
+    "location": {
+      "latitude": 48.8566,
+      "longitude": 2.3522
+    },
+    "address": "789 Cultural Avenue, Vienna, Austria",
+    "contactInfo": {
+      "name": "Grand Hotel Reservations",
+      "email": "reservations@viennagrandhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45914"]
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Apartment in Vienna",
+    "description": "Quaint apartment with a view of St. Stephen's Cathedral.",
+    "location": {
+      "latitude": 48.86,
+      "longitude": 2.348
+    },
+    "address": "101 Cathedral Street, Vienna, Austria",
+    "contactInfo": {
+      "name": "Apartment Host",
+      "email": "host@viennaapartment.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45917"]
+  },
+  {
+    "type": "hotel",
+    "name": "Interlaken Mountain Retreat",
+    "description": "Spectacular views of the Swiss Alps in a cozy mountain retreat.",
+    "location": {
+      "latitude": 46.6866,
+      "longitude": 7.863
+    },
+    "address": "456 Alpine Way, Interlaken, Switzerland",
+    "contactInfo": {
+      "name": "Mountain Lodge Reservations",
+      "email": "reservations@interlakenretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45918"]
+  },
+  {
+    "type": "airbnb",
+    "name": "Swiss Chalet Experience",
+    "description": "Traditional Swiss chalet with modern amenities.",
+    "location": {
+      "latitude": 46.689,
+      "longitude": 7.87
+    },
+    "address": "789 Chalet Lane, Interlaken, Switzerland",
+    "contactInfo": {
+      "name": "Chalet Host",
+      "email": "host@swisschalet.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": ["65783d2d5d1d367f59d45911", "65783d2d5d1d367f59d45919"]
+  },
+
+  {
+    "type": "hotel",
+    "name": "Dublin Central Hotel",
+    "description": "Modern hotel in the heart of Dublin",
+    "location": {
+      "latitude": 53.3498,
+      "longitude": -6.2603
+    },
+    "address": "O'Connell Street, Dublin, Ireland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@dublincentralhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Quaint Irish Cottage",
+    "description": "Traditional cottage in a peaceful setting",
+    "location": {
+      "latitude": 53.3551,
+      "longitude": -6.2999
+    },
+    "address": "Ballsbridge, Dublin, Ireland",
+    "contactInfo": {
+      "name": "Mary O'Connor",
+      "email": "mary@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Royal Krakow Hotel",
+    "description": "Elegant hotel in the historic city of Krakow",
+    "location": {
+      "latitude": 50.0647,
+      "longitude": 19.945
+    },
+    "address": "Main Square, Krakow, Poland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@royalkrakowhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Polish Apartment",
+    "description": "Warm and welcoming apartment in Krakow",
+    "location": {
+      "latitude": 50.0516,
+      "longitude": 19.9359
+    },
+    "address": "Kazimierz District, Krakow, Poland",
+    "contactInfo": {
+      "name": "Mateusz Nowak",
+      "email": "mateusz@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Sea View Resort",
+    "description": "A seaside resort with stunning views",
+    "location": {
+      "latitude": 44.1086,
+      "longitude": 9.7025
+    },
+    "address": "Via della Marina, 123, Cinque Terre, Italy",
+    "contactInfo": {
+      "name": "Resort Reservations",
+      "email": "info@seaviewresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Coastal Cottage Retreat",
+    "description": "Charming cottage near the coastline",
+    "location": {
+      "latitude": 44.1356,
+      "longitude": 9.7225
+    },
+    "address": "Via del Pescatore, 56, Cinque Terre, Italy",
+    "contactInfo": {
+      "name": "Maria Rossi",
+      "email": "maria@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Danube Grand Hotel",
+    "description": "Elegant hotel overlooking the Danube River",
+    "location": {
+      "latitude": 47.4979,
+      "longitude": 19.0502
+    },
+    "address": "Budapest Main Street, Budapest, Hungary",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@danubegrandhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cityscape Apartment",
+    "description": "Modern apartment in the heart of Budapest",
+    "location": {
+      "latitude": 47.4979,
+      "longitude": 19.0402
+    },
+    "address": "Vörösmarty tér, Budapest, Hungary",
+    "contactInfo": {
+      "name": "Anna Kovacs",
+      "email": "anna@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Northern Lights Hotel",
+    "description": "Cozy hotel with a view of the Northern Lights",
+    "location": {
+      "latitude": 64.1265,
+      "longitude": -21.8174
+    },
+    "address": "Aurora Street 123, Reykjavik, Iceland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@northernlightshotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Icelandic Cottage",
+    "description": "Traditional cottage surrounded by nature",
+    "location": {
+      "latitude": 64.1102,
+      "longitude": -21.8277
+    },
+    "address": "Mountain View Road, Reykjavik, Iceland",
+    "contactInfo": {
+      "name": "Elsa Bjornsdottir",
+      "email": "elsa@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Royal Palace Hotel",
+    "description": "Elegant hotel near the Royal Palace",
+    "location": {
+      "latitude": 59.3293,
+      "longitude": 18.0686
+    },
+    "address": "Kungsgatan 1, Stockholm, Sweden",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@royalpalacehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Scandinavian Loft",
+    "description": "Modern loft with Scandinavian design",
+    "location": {
+      "latitude": 59.3322,
+      "longitude": 18.0675
+    },
+    "address": "Sodermalm 42, Stockholm, Sweden",
+    "contactInfo": {
+      "name": "Olivia Andersson",
+      "email": "olivia@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Alpine View Hotel",
+    "description": "Hotel with panoramic views of the Alps",
+    "location": {
+      "latitude": 47.8095,
+      "longitude": 13.055
+    },
+    "address": "Alpenstrasse 55, Salzburg, Austria",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@alpineviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Traditional Austrian Chalet",
+    "description": "Quaint chalet surrounded by nature",
+    "location": {
+      "latitude": 47.7985,
+      "longitude": 13.0565
+    },
+    "address": "Bergweg 12, Salzburg, Austria",
+    "contactInfo": {
+      "name": "Hans Schmidt",
+      "email": "hans@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Canal-side Boutique Hotel",
+    "description": "Charming hotel along the Bruges canals",
+    "location": {
+      "latitude": 51.2093,
+      "longitude": 3.2247
+    },
+    "address": "Langerei 22, Bruges, Belgium",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@canalboutiquehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Bruges House",
+    "description": "Centrally located historic house",
+    "location": {
+      "latitude": 51.2068,
+      "longitude": 3.2229
+    },
+    "address": "Grote Markt 15, Bruges, Belgium",
+    "contactInfo": {
+      "name": "Sophie De Vries",
+      "email": "sophie@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mountain Retreat Hotel",
+    "description": "Hotel with a view of Lake Lucerne",
+    "location": {
+      "latitude": 47.0502,
+      "longitude": 8.3093
+    },
+    "address": "Seestrasse 123, Lucerne, Switzerland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@mountainretreathotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Swiss Lakeside Chalet",
+    "description": "Traditional chalet by the lake",
+    "location": {
+      "latitude": 47.0433,
+      "longitude": 8.3156
+    },
+    "address": "Bergweg 8, Lucerne, Switzerland",
+    "contactInfo": {
+      "name": "Luisa Müller",
+      "email": "luisa@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Adriatic View Hotel",
+    "description": "Hotel with stunning views of the Adriatic Sea",
+    "location": {
+      "latitude": 42.6507,
+      "longitude": 18.0944
+    },
+    "address": "Ulica od Puca 17, Dubrovnik, Croatia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@adriaticviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Seafront Dubrovnik Apartment",
+    "description": "Apartment with direct access to the sea",
+    "location": {
+      "latitude": 42.649,
+      "longitude": 18.0918
+    },
+    "address": "Ploče 25, Dubrovnik, Croatia",
+    "contactInfo": {
+      "name": "Ivan Petrović",
+      "email": "ivan@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Nyhavn Harbor Hotel",
+    "description": "Harborfront hotel in the heart of Copenhagen",
+    "location": {
+      "latitude": 55.6761,
+      "longitude": 12.5683
+    },
+    "address": "Nyhavn 5, Copenhagen, Denmark",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@nyhavnhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Scandinavian Loft",
+    "description": "Spacious loft with Scandinavian design",
+    "location": {
+      "latitude": 55.6782,
+      "longitude": 12.5689
+    },
+    "address": "Vesterbrogade 87, Copenhagen, Denmark",
+    "contactInfo": {
+      "name": "Mette Andersen",
+      "email": "mette@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Alfama Heritage Hotel",
+    "description": "Historic hotel in the Alfama district",
+    "location": {
+      "latitude": 38.7223,
+      "longitude": -9.1393
+    },
+    "address": "Rua da Saudade 34, Lisbon, Portugal",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@alfamahotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Colorful Lisbon Apartment",
+    "description": "Vibrant apartment in the heart of Lisbon",
+    "location": {
+      "latitude": 38.7121,
+      "longitude": -9.1385
+    },
+    "address": "Rua Augusta 55, Lisbon, Portugal",
+    "contactInfo": {
+      "name": "Ana Silva",
+      "email": "ana@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Riviera Beach Resort",
+    "description": "Luxurious beachfront resort on the French Riviera",
+    "location": {
+      "latitude": 43.7102,
+      "longitude": 7.262
+    },
+    "address": "Promenade des Anglais, Nice, France",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@rivieraresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Old Town Apartment",
+    "description": "Charming apartment in Nice's Old Town",
+    "location": {
+      "latitude": 43.6995,
+      "longitude": 7.2762
+    },
+    "address": "Rue de la Prefecture 21, Nice, France",
+    "contactInfo": {
+      "name": "Claire Dubois",
+      "email": "claire@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Acropolis View Hotel",
+    "description": "Hotel with a breathtaking view of the Acropolis",
+    "location": {
+      "latitude": 37.9838,
+      "longitude": 23.7275
+    },
+    "address": "Dionysiou Areopagitou 10, Athens, Greece",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@acropolisviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Athens Loft",
+    "description": "Contemporary loft in the heart of Athens",
+    "location": {
+      "latitude": 37.9775,
+      "longitude": 23.7265
+    },
+    "address": "Ermou Street 45, Athens, Greece",
+    "contactInfo": {
+      "name": "Yannis Papadopoulos",
+      "email": "yannis@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Alhambra Palace Hotel",
+    "description": "Historic hotel with views of the Alhambra",
+    "location": {
+      "latitude": 37.1773,
+      "longitude": -3.5986
+    },
+    "address": "Cuesta de Gomerez 8, Granada, Spain",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@alhambrapalace.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Spanish Courtyard House",
+    "description": "Traditional house with a beautiful courtyard",
+    "location": {
+      "latitude": 37.1792,
+      "longitude": -3.6015
+    },
+    "address": "Calle Santa Isabel 20, Granada, Spain",
+    "contactInfo": {
+      "name": "Maria Rodriguez",
+      "email": "maria@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Bavarian Charm Hotel",
+    "description": "Hotel with traditional Bavarian hospitality",
+    "location": {
+      "latitude": 48.8566,
+      "longitude": 2.3522
+    },
+    "address": "Marienplatz 15, Munich, Germany",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@bavariancharmhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Munich Apartment",
+    "description": "Sleek apartment in the heart of Munich",
+    "location": {
+      "latitude": 48.8647,
+      "longitude": 2.3525
+    },
+    "address": "Schwabingstrasse 30, Munich, Germany",
+    "contactInfo": {
+      "name": "Ludwig Müller",
+      "email": "ludwig@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Fjord View Hotel",
+    "description": "Hotel with breathtaking views of the fjords",
+    "location": {
+      "latitude": 60.3913,
+      "longitude": 5.3221
+    },
+    "address": "Bryggen 22, Bergen, Norway",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@fjordviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cosy Bergen Cabin",
+    "description": "Traditional cabin in the Norwegian wilderness",
+    "location": {
+      "latitude": 60.384,
+      "longitude": 5.3217
+    },
+    "address": "Skansen 10, Bergen, Norway",
+    "contactInfo": {
+      "name": "Ingrid Olsen",
+      "email": "ingrid@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Adriatic Palace Hotel",
+    "description": "Luxury hotel overlooking the Adriatic Sea",
+    "location": {
+      "latitude": 43.509,
+      "longitude": 16.4409
+    },
+    "address": "Obala Hrvatskog narodnog preporoda 10, Split, Croatia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@adriaticpalace.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Old Town Apartment",
+    "description": "Charming apartment in the heart of Split's old town",
+    "location": {
+      "latitude": 43.5072,
+      "longitude": 16.439
+    },
+    "address": "Dioklecijanova 12, Split, Croatia",
+    "contactInfo": {
+      "name": "Ana Petrović",
+      "email": "ana@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Renaissance Grand Hotel",
+    "description": "Historic hotel in the heart of Florence",
+    "location": {
+      "latitude": 43.773,
+      "longitude": 11.2569
+    },
+    "address": "Piazza della Signoria 5, Florence, Italy",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@renaissanceflorence.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Artistic Loft in Oltrarno",
+    "description": "Unique loft with an artistic touch in the Oltrarno district",
+    "location": {
+      "latitude": 43.7688,
+      "longitude": 11.2565
+    },
+    "address": "Via de' Bardi 20, Florence, Italy",
+    "contactInfo": {
+      "name": "Giulia Rossi",
+      "email": "giulia@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Fjord View Hotel",
+    "description": "Scenic hotel with panoramic views of Oslo Fjord",
+    "location": {
+      "latitude": 59.913,
+      "longitude": 10.757
+    },
+    "address": "Akershusstranda 74, Oslo, Norway",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@fjordviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Scandinavian Apartment",
+    "description": "Sleek and modern apartment in the heart of Oslo",
+    "location": {
+      "latitude": 59.9145,
+      "longitude": 10.7594
+    },
+    "address": "Karl Johans gate 23, Oslo, Norway",
+    "contactInfo": {
+      "name": "Erik Hansen",
+      "email": "erik@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Nordic Charm Hotel",
+    "description": "Charming hotel with a Nordic touch",
+    "location": {
+      "latitude": 60.1699,
+      "longitude": 24.9374
+    },
+    "address": "Mannerheimintie 55, Helsinki, Finland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@nordiccharm.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Scandinavian Cozy Cottage",
+    "description": "Traditional cottage in the outskirts of Helsinki",
+    "location": {
+      "latitude": 60.1729,
+      "longitude": 24.9182
+    },
+    "address": "Espoo, Finland",
+    "contactInfo": {
+      "name": "Liisa Virtanen",
+      "email": "liisa@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Danube View Hotel",
+    "description": "Modern hotel with a view of the Danube River",
+    "location": {
+      "latitude": 48.1486,
+      "longitude": 17.1077
+    },
+    "address": "Hviezdoslavovo Namestie 1, Bratislava, Slovakia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@danubeviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Old Town Apartment",
+    "description": "Charming apartment in the heart of the Old Town",
+    "location": {
+      "latitude": 48.1445,
+      "longitude": 17.1128
+    },
+    "address": "Michalska 5, Bratislava, Slovakia",
+    "contactInfo": {
+      "name": "Anna Novak",
+      "email": "anna@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Grand Harbor Hotel",
+    "description": "Elegant hotel with a view of the Grand Harbor",
+    "location": {
+      "latitude": 35.8989,
+      "longitude": 14.5146
+    },
+    "address": "Battery Street, Valletta, Malta",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@grandharborhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Valletta Townhouse",
+    "description": "Restored townhouse in the heart of Valletta",
+    "location": {
+      "latitude": 35.8978,
+      "longitude": 14.5136
+    },
+    "address": "Republic Street, Valletta, Malta",
+    "contactInfo": {
+      "name": "John Camilleri",
+      "email": "john@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Titanic View Hotel",
+    "description": "Overlooking the historic Titanic Quarter",
+    "location": {
+      "latitude": 54.597,
+      "longitude": -5.9301
+    },
+    "address": "Queen's Road, Belfast, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@titanicviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Irish Cottage",
+    "description": "Traditional cottage in the countryside",
+    "location": {
+      "latitude": 54.6514,
+      "longitude": -5.9622
+    },
+    "address": "County Antrim, Belfast, United Kingdom",
+    "contactInfo": {
+      "name": "Mary O'Connor",
+      "email": "mary@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Old Town Plaza Hotel",
+    "description": "Centrally located hotel in the heart of the Old Town",
+    "location": {
+      "latitude": 59.437,
+      "longitude": 24.7536
+    },
+    "address": "Raekoja plats 1, Tallinn, Estonia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@oldtownplazahotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Scenic Baltic Sea Apartment",
+    "description": "Apartment with a view of the Baltic Sea",
+    "location": {
+      "latitude": 59.4475,
+      "longitude": 24.7533
+    },
+    "address": "Pikk 45, Tallinn, Estonia",
+    "contactInfo": {
+      "name": "Elena Ivanova",
+      "email": "elena@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Royal Palace Hotel",
+    "description": "Luxurious hotel near the Royal Castle",
+    "location": {
+      "latitude": 52.2297,
+      "longitude": 21.0122
+    },
+    "address": "Krakowskie Przedmiescie 4, Warsaw, Poland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@royalpalacehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Warsaw Loft",
+    "description": "Stylish loft in the heart of the city",
+    "location": {
+      "latitude": 52.233,
+      "longitude": 21.0087
+    },
+    "address": "Nowy Swiat 27, Warsaw, Poland",
+    "contactInfo": {
+      "name": "Mateusz Kowalski",
+      "email": "mateusz@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Castle View Hotel",
+    "description": "Scenic hotel with a view of Ljubljana Castle",
+    "location": {
+      "latitude": 46.0569,
+      "longitude": 14.5058
+    },
+    "address": "Grajska Cesta 1, Ljubljana, Slovenia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@castleviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Riverside Retreat Apartment",
+    "description": "Apartment along the Ljubljanica River",
+    "location": {
+      "latitude": 46.0499,
+      "longitude": 14.5047
+    },
+    "address": "Ciril-Metodov Trg 10, Ljubljana, Slovenia",
+    "contactInfo": {
+      "name": "Ana Petrovic",
+      "email": "ana@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Harbor View Hotel",
+    "description": "Seaside hotel with stunning harbor views",
+    "location": {
+      "latitude": 51.8969,
+      "longitude": -8.4863
+    },
+    "address": "Custom House Street, Cork, Ireland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@harborviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Irish Countryside Cottage",
+    "description": "Quaint cottage surrounded by green fields",
+    "location": {
+      "latitude": 51.8796,
+      "longitude": -8.4386
+    },
+    "address": "County Cork, Ireland",
+    "contactInfo": {
+      "name": "Sean Murphy",
+      "email": "sean@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Baltic Seafront Hotel",
+    "description": "Hotel with direct access to the Baltic Sea",
+    "location": {
+      "latitude": 54.352,
+      "longitude": 18.6466
+    },
+    "address": "Dlugi Targ 20, Gdansk, Poland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@balticseafronthotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Gdansk Townhouse",
+    "description": "Traditional townhouse in the heart of Gdansk",
+    "location": {
+      "latitude": 54.348,
+      "longitude": 18.6531
+    },
+    "address": "Piwna Street 10, Gdansk, Poland",
+    "contactInfo": {
+      "name": "Katarzyna Nowak",
+      "email": "katarzyna@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Coastal Retreat Resort",
+    "description": "Luxurious resort with panoramic views of the Amalfi Coast",
+    "location": {
+      "latitude": 40.634,
+      "longitude": 14.6027
+    },
+    "address": "Via Positano 123, Amalfi, Italy",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@coastalretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Seaside Villa",
+    "description": "Charming villa overlooking the Mediterranean Sea",
+    "location": {
+      "latitude": 40.6331,
+      "longitude": 14.603
+    },
+    "address": "Via dei Cappuccini 45, Amalfi, Italy",
+    "contactInfo": {
+      "name": "Giovanni Rossi",
+      "email": "giovanni@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Castle View Inn",
+    "description": "Quaint inn with a view of Cardiff Castle",
+    "location": {
+      "latitude": 51.4816,
+      "longitude": -3.1791
+    },
+    "address": "High Street, Cardiff, United Kingdom",
+    "contactInfo": {
+      "name": "Inn Reservations",
+      "email": "info@castleviewinn.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern City Apartment",
+    "description": "Central apartment in the heart of Cardiff",
+    "location": {
+      "latitude": 51.477,
+      "longitude": -3.1764
+    },
+    "address": "Queen Street 20, Cardiff, United Kingdom",
+    "contactInfo": {
+      "name": "Emma Jones",
+      "email": "emma@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mountain View Resort",
+    "description": "Resort with breathtaking views of the Carpathian Mountains",
+    "location": {
+      "latitude": 45.6579,
+      "longitude": 25.6012
+    },
+    "address": "Strada Republicii 78, Brasov, Romania",
+    "contactInfo": {
+      "name": "Resort Reservations",
+      "email": "info@mountainviewresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Transylvanian Cottage",
+    "description": "Traditional cottage in the Transylvanian countryside",
+    "location": {
+      "latitude": 45.652,
+      "longitude": 25.6069
+    },
+    "address": "Strada Muresenilor 10, Brasov, Romania",
+    "contactInfo": {
+      "name": "Andrei Popescu",
+      "email": "andrei@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Brandenburg Plaza Hotel",
+    "description": "Central hotel near Brandenburg Gate",
+    "location": {
+      "latitude": 52.52,
+      "longitude": 13.405
+    },
+    "address": "Unter den Linden 77, Berlin, Germany",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@brandenburgplaza.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Artsy Berlin Loft",
+    "description": "Unique loft in the vibrant Kreuzberg district",
+    "location": {
+      "latitude": 52.497,
+      "longitude": 13.4051
+    },
+    "address": "Oranienstraße 55, Berlin, Germany",
+    "contactInfo": {
+      "name": "Sophie Müller",
+      "email": "sophie@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mediterranean View Hotel",
+    "description": "Hotel with panoramic views of the Mediterranean Sea",
+    "location": {
+      "latitude": 43.2965,
+      "longitude": 5.3698
+    },
+    "address": "Quai des Belges 7, Marseille, France",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@mediterraneanview.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Old Port Apartment",
+    "description": "Apartment in the historic Old Port district",
+    "location": {
+      "latitude": 43.2942,
+      "longitude": 5.3746
+    },
+    "address": "Rue de la République 22, Marseille, France",
+    "contactInfo": {
+      "name": "Jean-Luc Dubois",
+      "email": "jean-luc@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Georgian Elegance Hotel",
+    "description": "Historic hotel in the Georgian heart of Bath",
+    "location": {
+      "latitude": 51.3758,
+      "longitude": -2.3599
+    },
+    "address": "Queen Square, Bath, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@georgianelegance.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Quaint Cotswold Cottage",
+    "description": "Cottage in the nearby Cotswold countryside",
+    "location": {
+      "latitude": 51.3765,
+      "longitude": -2.3579
+    },
+    "address": "High Street, Lacock, United Kingdom",
+    "contactInfo": {
+      "name": "Emma Smith",
+      "email": "emma@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Royal Palace Grand Hotel",
+    "description": "Luxurious hotel near the Royal Palace",
+    "location": {
+      "latitude": 40.4168,
+      "longitude": -3.7038
+    },
+    "address": "Calle de Bailén 1, Madrid, Spain",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@royalpalacegrand.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Chic Retiro Park Apartment",
+    "description": "Modern apartment overlooking Retiro Park",
+    "location": {
+      "latitude": 40.4185,
+      "longitude": -3.6846
+    },
+    "address": "Calle de Alcalá 198, Madrid, Spain",
+    "contactInfo": {
+      "name": "Isabella Rodriguez",
+      "email": "isabella@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Tuscan Retreat Hotel",
+    "description": "Tranquil hotel in the heart of Tuscany",
+    "location": {
+      "latitude": 43.3244,
+      "longitude": 11.3314
+    },
+    "address": "Via del Capitano 15, Siena, Italy",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@tuscanretreathotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Sienese Villa",
+    "description": "Authentic villa with panoramic views",
+    "location": {
+      "latitude": 43.3169,
+      "longitude": 11.3302
+    },
+    "address": "Strada di Montalbuccio 22, Siena, Italy",
+    "contactInfo": {
+      "name": "Giulia Rossi",
+      "email": "giulia@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Alpine View Hotel",
+    "description": "Modern hotel with stunning Alpine views",
+    "location": {
+      "latitude": 47.3769,
+      "longitude": 8.5417
+    },
+    "address": "Bahnhofstrasse 55, Zurich, Switzerland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@alpineviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Swiss Chalet",
+    "description": "Traditional chalet in a serene location",
+    "location": {
+      "latitude": 47.3683,
+      "longitude": 8.5404
+    },
+    "address": "Alpenweg 10, Zurich, Switzerland",
+    "contactInfo": {
+      "name": "Markus Müller",
+      "email": "markus@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mediterranean View Hotel",
+    "description": "Relaxing hotel with a view of the Mediterranean",
+    "location": {
+      "latitude": 39.4699,
+      "longitude": -0.3763
+    },
+    "address": "Carrer de la Pau 28, Valencia, Spain",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@mediterraneanview.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Spanish Courtyard Apartment",
+    "description": "Cozy apartment with a private courtyard",
+    "location": {
+      "latitude": 39.4682,
+      "longitude": -0.3744
+    },
+    "address": "Calle del Mar 15, Valencia, Spain",
+    "contactInfo": {
+      "name": "Elena García",
+      "email": "elena@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Baltic Capital Hotel",
+    "description": "Modern hotel in the heart of Riga",
+    "location": {
+      "latitude": 56.9496,
+      "longitude": 24.1052
+    },
+    "address": "Elizabetes iela 55, Riga, Latvia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@balticcapital.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Art Nouveau Loft",
+    "description": "Spacious loft in an Art Nouveau building",
+    "location": {
+      "latitude": 56.9537,
+      "longitude": 24.1132
+    },
+    "address": "Terbatas iela 10, Riga, Latvia",
+    "contactInfo": {
+      "name": "Juris Bērziņš",
+      "email": "juris@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Highland Retreat Hotel",
+    "description": "Scenic hotel in the heart of Glasgow",
+    "location": {
+      "latitude": 55.8642,
+      "longitude": -4.2518
+    },
+    "address": "Sauchiehall Street 123, Glasgow, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@highlandretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Scottish Cottage",
+    "description": "Traditional cottage with a view of the Clyde",
+    "location": {
+      "latitude": 55.8595,
+      "longitude": -4.261
+    },
+    "address": "Argyle Street 45, Glasgow, United Kingdom",
+    "contactInfo": {
+      "name": "Fiona MacDonald",
+      "email": "fiona@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Rhine View Hotel",
+    "description": "Elegant hotel with a view of the Rhine River",
+    "location": {
+      "latitude": 50.9375,
+      "longitude": 6.9603
+    },
+    "address": "Deutzer Werftstraße 1, Cologne, Germany",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@rhineviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Cologne Apartment",
+    "description": "Centrally located apartment with contemporary design",
+    "location": {
+      "latitude": 50.9404,
+      "longitude": 6.9599
+    },
+    "address": "Severinstraße 88, Cologne, Germany",
+    "contactInfo": {
+      "name": "Anna Müller",
+      "email": "anna@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Arctic Retreat Hotel",
+    "description": "Cozy hotel in the Arctic Circle",
+    "location": {
+      "latitude": 66.497,
+      "longitude": 25.7245
+    },
+    "address": "Koskikatu 5, Rovaniemi, Finland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@arcticretreathotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Lapland Cabin",
+    "description": "Traditional cabin surrounded by snow-covered landscapes",
+    "location": {
+      "latitude": 66.4956,
+      "longitude": 25.7269
+    },
+    "address": "Joulumaantie 12, Rovaniemi, Finland",
+    "contactInfo": {
+      "name": "Mika Järvinen",
+      "email": "mika@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Cambridge Riverside Hotel",
+    "description": "Riverside hotel offering picturesque views",
+    "location": {
+      "latitude": 52.2053,
+      "longitude": 0.1218
+    },
+    "address": "Quayside, Cambridge, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@cambridgeriverside.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Cambridge Cottage",
+    "description": "Charming cottage near the University of Cambridge",
+    "location": {
+      "latitude": 52.2041,
+      "longitude": 0.1218
+    },
+    "address": "Silver Street 36, Cambridge, United Kingdom",
+    "contactInfo": {
+      "name": "Emma Thompson",
+      "email": "emma@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Baltic Capital Hotel",
+    "description": "Modern hotel in the heart of Vilnius",
+    "location": {
+      "latitude": 54.6872,
+      "longitude": 25.2797
+    },
+    "address": "Gedimino pr. 35, Vilnius, Lithuania",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@balticcapital.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Vilnius Loft",
+    "description": "Attic loft with panoramic city views",
+    "location": {
+      "latitude": 54.6824,
+      "longitude": 25.2798
+    },
+    "address": "Pilies g. 18, Vilnius, Lithuania",
+    "contactInfo": {
+      "name": "Lukas Petrauskas",
+      "email": "lukas@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Italian Charm Hotel",
+    "description": "Charming hotel in the heart of Bologna",
+    "location": {
+      "latitude": 44.4949,
+      "longitude": 11.3426
+    },
+    "address": "Via dell'Indipendenza 33, Bologna, Italy",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@italiancharmhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Rooftop Bologna Apartment",
+    "description": "Modern apartment with a private rooftop terrace",
+    "location": {
+      "latitude": 44.4956,
+      "longitude": 11.3441
+    },
+    "address": "Via Santo Stefano 10, Bologna, Italy",
+    "contactInfo": {
+      "name": "Giulia Rossi",
+      "email": "giulia@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mediterranean View Hotel",
+    "description": "Modern hotel with panoramic views of the Mediterranean",
+    "location": {
+      "latitude": 41.3851,
+      "longitude": 2.1734
+    },
+    "address": "Passeig de Gràcia 75, Barcelona, Spain",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@mediterraneanview.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Gothic Quarter Loft",
+    "description": "Cozy loft in the heart of the Gothic Quarter",
+    "location": {
+      "latitude": 41.3827,
+      "longitude": 2.175
+    },
+    "address": "Carrer de Ferran 22, Barcelona, Spain",
+    "contactInfo": {
+      "name": "Carlos Martínez",
+      "email": "carlos@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Imperial Palace Hotel",
+    "description": "Luxurious hotel with a view of the Neva River",
+    "location": {
+      "latitude": 59.9343,
+      "longitude": 30.3351
+    },
+    "address": "Nevsky Prospekt 1, Saint Petersburg, Russia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@imperialpalace.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hostel",
+    "name": "Backpacker's Haven",
+    "description": "Budget-friendly hostel in the heart of the city",
+    "location": {
+      "latitude": 59.9311,
+      "longitude": 30.331
+    },
+    "address": "Liteiny Prospekt 53, Saint Petersburg, Russia",
+    "contactInfo": {
+      "name": "Hostel Reception",
+      "email": "info@backpackershaven.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Guggenheim View Hotel",
+    "description": "Modern hotel with a view of the Guggenheim Museum",
+    "location": {
+      "latitude": 43.263,
+      "longitude": -2.935
+    },
+    "address": "Avenida Abandoibarra 2, Bilbao, Spain",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@guggenheimview.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Basque Apartment",
+    "description": "Traditional apartment in the heart of Bilbao",
+    "location": {
+      "latitude": 43.2625,
+      "longitude": -2.9343
+    },
+    "address": "Calle Elcano 15, Bilbao, Spain",
+    "contactInfo": {
+      "name": "Ainhoa Gómez",
+      "email": "ainhoa@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Italian Riviera Resort",
+    "description": "Seaside resort with panoramic views of Portofino",
+    "location": {
+      "latitude": 44.3039,
+      "longitude": 9.2094
+    },
+    "address": "Via Roma 10, Portofino, Italy",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@rivieraresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "camping",
+    "name": "Portofino Camping Retreat",
+    "description": "Campsite surrounded by nature near Portofino",
+    "location": {
+      "latitude": 44.3021,
+      "longitude": 9.2103
+    },
+    "address": "Strada del Parco 5, Portofino, Italy",
+    "contactInfo": {
+      "name": "Campsite Office",
+      "email": "info@portofinocamping.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Pirin Mountain Resort",
+    "description": "Ski resort hotel with stunning mountain views",
+    "location": {
+      "latitude": 41.8399,
+      "longitude": 23.4884
+    },
+    "address": "Pirin Street 25, Bansko, Bulgaria",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@pirinresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Traditional Bansko Chalet",
+    "description": "Cozy chalet with a fireplace in Bansko",
+    "location": {
+      "latitude": 41.8375,
+      "longitude": 23.4871
+    },
+    "address": "Rila Street 8, Bansko, Bulgaria",
+    "contactInfo": {
+      "name": "Petar Ivanov",
+      "email": "petar@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Swiss Lakeside Hotel",
+    "description": "Charming hotel with a view of Lake Lucerne",
+    "location": {
+      "latitude": 47.0502,
+      "longitude": 8.3093
+    },
+    "address": "Seeburgstrasse 10, Lucerne, Switzerland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@lakesidehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "camping",
+    "name": "Alpine Camping Retreat",
+    "description": "Camping experience in the Swiss Alps",
+    "location": {
+      "latitude": 47.0487,
+      "longitude": 8.3053
+    },
+    "address": "Alpenstrasse 15, Lucerne, Switzerland",
+    "contactInfo": {
+      "name": "Campsite Office",
+      "email": "info@alpinecamping.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Cliffside Galway Hotel",
+    "description": "Scenic hotel overlooking Galway Bay",
+    "location": {
+      "latitude": 53.269,
+      "longitude": -9.049
+    },
+    "address": "Salthill Promenade, Galway, Ireland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@galwayhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Quaint Irish Cottage",
+    "description": "Traditional cottage near Galway Bay",
+    "location": {
+      "latitude": 53.268,
+      "longitude": -9.048
+    },
+    "address": "Cloonacauneen Road, Galway, Ireland",
+    "contactInfo": {
+      "name": "Mary O'Connor",
+      "email": "mary@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Azure Beachfront Resort",
+    "description": "Beachfront resort with crystal-clear waters",
+    "location": {
+      "latitude": 37.7886,
+      "longitude": 20.8996
+    },
+    "address": "Navagio Beach, Zakynthos, Greece",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@azurebeachresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "camping",
+    "name": "Olive Grove Camping Retreat",
+    "description": "Camping surrounded by olive groves in Zakynthos",
+    "location": {
+      "latitude": 37.7911,
+      "longitude": 20.8999
+    },
+    "address": "Alykes Road, Zakynthos, Greece",
+    "contactInfo": {
+      "name": "Campsite Office",
+      "email": "info@olivegrovecamping.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Grand Spa Hotel",
+    "description": "Luxurious spa hotel in the heart of Karlovy Vary",
+    "location": {
+      "latitude": 50.2326,
+      "longitude": 12.8717
+    },
+    "address": "Sadová 28, Karlovy Vary, Czech Republic",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@grandspahotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Czech Apartment",
+    "description": "Traditional apartment with a view of the river",
+    "location": {
+      "latitude": 50.2302,
+      "longitude": 12.8729
+    },
+    "address": "Rybářská 15, Karlovy Vary, Czech Republic",
+    "contactInfo": {
+      "name": "Martina Nováková",
+      "email": "martina@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Alpine Retreat Hotel",
+    "description": "Ski-in, ski-out hotel in the Swiss Alps",
+    "location": {
+      "latitude": 46.8219,
+      "longitude": 8.4011
+    },
+    "address": "Dorfstrasse 10, Engelberg, Switzerland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@alpineretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hostel",
+    "name": "Mountain Backpacker Hostel",
+    "description": "Budget-friendly hostel for backpackers",
+    "location": {
+      "latitude": 46.8205,
+      "longitude": 8.3987
+    },
+    "address": "Bergweg 5, Engelberg, Switzerland",
+    "contactInfo": {
+      "name": "Hostel Reception",
+      "email": "info@mountainhostel.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Cliffside Dingle Hotel",
+    "description": "Scenic hotel overlooking the Dingle Peninsula",
+    "location": {
+      "latitude": 52.155,
+      "longitude": -10.172
+    },
+    "address": "Slea Head Drive, Dingle, Ireland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@dinglehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Traditional Irish Cottage",
+    "description": "Cozy cottage with a fireplace on the peninsula",
+    "location": {
+      "latitude": 52.157,
+      "longitude": -10.174
+    },
+    "address": "Ballyferriter, Dingle, Ireland",
+    "contactInfo": {
+      "name": "Sean O'Sullivan",
+      "email": "sean@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Salt Mine Heritage Hotel",
+    "description": "Unique hotel located near the Wieliczka Salt Mine",
+    "location": {
+      "latitude": 49.982,
+      "longitude": 20.0616
+    },
+    "address": "Minerska Street 3, Wieliczka, Poland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@saltheritage.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Miner's Retreat Cottage",
+    "description": "Cozy cottage with a salt mine view",
+    "location": {
+      "latitude": 49.983,
+      "longitude": 20.062
+    },
+    "address": "Kopalniana 8, Wieliczka, Poland",
+    "contactInfo": {
+      "name": "Anna Nowak",
+      "email": "anna@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "camping",
+    "name": "Lakeview Camping Site",
+    "description": "Campsite with beautiful views of Lake Ammersee",
+    "location": {
+      "latitude": 47.9999,
+      "longitude": 11.1104
+    },
+    "address": "Seeweg 1, Herrsching am Ammersee, Germany",
+    "contactInfo": {
+      "name": "Campsite Reservations",
+      "email": "info@lakeviewcamping.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "youth hostel",
+    "name": "Ammersee Youth Hostel",
+    "description": "Affordable accommodation for young travelers",
+    "location": {
+      "latitude": 47.9975,
+      "longitude": 11.1138
+    },
+    "address": "Jugendherberge-Weg 2, Herrsching am Ammersee, Germany",
+    "contactInfo": {
+      "name": "Hostel Reservations",
+      "email": "info@ammerseeyouthhostel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Turquoise Beach Resort",
+    "description": "Luxurious beachfront resort in Ölüdeniz",
+    "location": {
+      "latitude": 36.5569,
+      "longitude": 29.1247
+    },
+    "address": "Belcekız Mahallesi, 48340 Ölüdeniz/Fethiye, Turkey",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@turquoisebeach.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "camping",
+    "name": "Sunset Campsite",
+    "description": "Camping site with a breathtaking sunset view",
+    "location": {
+      "latitude": 36.5605,
+      "longitude": 29.1317
+    },
+    "address": "Kumburnu Mahallesi, 48300 Fethiye/Muğla, Turkey",
+    "contactInfo": {
+      "name": "Campsite Reservations",
+      "email": "info@sunsetcampsite.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Fjord View Hotel",
+    "description": "Scenic hotel with views of the Ålesund fjords",
+    "location": {
+      "latitude": 62.4733,
+      "longitude": 6.1575
+    },
+    "address": "Strandgata 1, Ålesund, Norway",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@fjordviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Nordic Cabin",
+    "description": "Traditional cabin with a Nordic touch",
+    "location": {
+      "latitude": 62.4687,
+      "longitude": 6.1512
+    },
+    "address": "Skansen 12, Ålesund, Norway",
+    "contactInfo": {
+      "name": "Lars Hansen",
+      "email": "lars@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Heavenly Heights Hotel",
+    "description": "Hotel with panoramic views near Meteora monasteries",
+    "location": {
+      "latitude": 39.7148,
+      "longitude": 21.6392
+    },
+    "address": "Meteora View 5, Kalambaka, Greece",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@heavenlyheights.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Mountaintop Retreat",
+    "description": "Cozy retreat with stunning views of Meteora",
+    "location": {
+      "latitude": 39.7093,
+      "longitude": 21.6257
+    },
+    "address": "Kastraki 22, Kalambaka, Greece",
+    "contactInfo": {
+      "name": "Maria Papadopoulos",
+      "email": "maria@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Medieval Manor Hotel",
+    "description": "Experience the charm of Rothenburg in a medieval manor",
+    "location": {
+      "latitude": 49.3801,
+      "longitude": 10.1867
+    },
+    "address": "Burggasse 3, Rothenburg, Germany",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@medievalmanor.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Half-Timbered Cottage",
+    "description": "Quaint cottage with half-timbered architecture",
+    "location": {
+      "latitude": 49.3808,
+      "longitude": 10.1861
+    },
+    "address": "Marktplatz 10, Rothenburg, Germany",
+    "contactInfo": {
+      "name": "Klaus Schmidt",
+      "email": "klaus@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Lakeview Resort Bled",
+    "description": "Resort with breathtaking views of Lake Bled",
+    "location": {
+      "latitude": 46.3698,
+      "longitude": 14.1143
+    },
+    "address": "Cesta svobode 12, Bled, Slovenia",
+    "contactInfo": {
+      "name": "Resort Reservations",
+      "email": "info@lakeviewbled.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Alpine Chalet",
+    "description": "Alpine chalet with a view of Bled Castle",
+    "location": {
+      "latitude": 46.3692,
+      "longitude": 14.1131
+    },
+    "address": "Gosposvetska cesta 8, Bled, Slovenia",
+    "contactInfo": {
+      "name": "Ana Novak",
+      "email": "ana@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Waterfall Retreat Hotel",
+    "description": "Hotel surrounded by the natural beauty of Plitvice Lakes",
+    "location": {
+      "latitude": 44.8654,
+      "longitude": 15.582
+    },
+    "address": "Jezerce 24, Plitvice Lakes, Croatia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@waterfallretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Lakeside Cabin",
+    "description": "Cozy cabin with direct access to Plitvice Lakes",
+    "location": {
+      "latitude": 44.8658,
+      "longitude": 15.5805
+    },
+    "address": "Rastovača 14, Plitvice Lakes, Croatia",
+    "contactInfo": {
+      "name": "Ivan Petrović",
+      "email": "ivan@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Canal Retreat Hotel",
+    "description": "Hotel with canal views in the picturesque Giethoorn",
+    "location": {
+      "latitude": 52.7482,
+      "longitude": 6.0785
+    },
+    "address": "Binnenpad 35, Giethoorn, Netherlands",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@canalretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Traditional Dutch Cottage",
+    "description": "Authentic cottage in the heart of Giethoorn",
+    "location": {
+      "latitude": 52.7447,
+      "longitude": 6.0784
+    },
+    "address": "Dorpsstraat 8, Giethoorn, Netherlands",
+    "contactInfo": {
+      "name": "Els de Boer",
+      "email": "els@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Lakeside Manor Hotel",
+    "description": "Manor hotel with views of the Lakes of Killarney",
+    "location": {
+      "latitude": 52.0594,
+      "longitude": -9.5075
+    },
+    "address": "Muckross Road, Killarney, Ireland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@lakesidemanor.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Irish Cottage Retreat",
+    "description": "Cozy cottage with Irish charm",
+    "location": {
+      "latitude": 52.059,
+      "longitude": -9.5102
+    },
+    "address": "Kenmare Place, Killarney, Ireland",
+    "contactInfo": {
+      "name": "Siobhan O'Connor",
+      "email": "siobhan@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mountain Retreat Hotel",
+    "description": "Escape to the mountains at Zlatibor's finest retreat",
+    "location": {
+      "latitude": 43.7241,
+      "longitude": 19.7158
+    },
+    "address": "Cajetinska cesma bb, Zlatibor, Serbia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@mountainretreathotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Countryside Chalet",
+    "description": "Charming chalet with a view of Zlatibor's landscapes",
+    "location": {
+      "latitude": 43.7232,
+      "longitude": 19.7165
+    },
+    "address": "Obudojevica 15, Zlatibor, Serbia",
+    "contactInfo": {
+      "name": "Milica Petrović",
+      "email": "milica@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Lakeview Lodge Hallstatt",
+    "description": "Lakeside lodge with stunning views in Hallstatt",
+    "location": {
+      "latitude": 47.5624,
+      "longitude": 13.6493
+    },
+    "address": "Seestrasse 10, Hallstatt, Austria",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@lakeviewlodge.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Alpine Retreat House",
+    "description": "Traditional Austrian house in the heart of Hallstatt",
+    "location": {
+      "latitude": 47.562,
+      "longitude": 13.6499
+    },
+    "address": "Marktplatz 5, Hallstatt, Austria",
+    "contactInfo": {
+      "name": "Franz Gruber",
+      "email": "franz@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Ancient City Hotel",
+    "description": "Explore Plovdiv from the comfort of this city-center hotel",
+    "location": {
+      "latitude": 42.1354,
+      "longitude": 24.7453
+    },
+    "address": "Bul. Tsar Boris III 22, Plovdiv, Bulgaria",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@ancientcityhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Old Town Apartment",
+    "description": "Stay in the heart of Plovdiv's historic Old Town",
+    "location": {
+      "latitude": 42.1358,
+      "longitude": 24.7479
+    },
+    "address": "Ulitsa Saborna 15, Plovdiv, Bulgaria",
+    "contactInfo": {
+      "name": "Maria Ivanova",
+      "email": "maria@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Garden View Hotel",
+    "description": "Enjoy the charm of Tivoli Gardens from this hotel",
+    "location": {
+      "latitude": 55.6736,
+      "longitude": 12.5684
+    },
+    "address": "Vesterbrogade 3, Copenhagen, Denmark",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@gardenviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Central City Apartment",
+    "description": "Modern apartment in the heart of Copenhagen",
+    "location": {
+      "latitude": 55.6754,
+      "longitude": 12.5657
+    },
+    "address": "Nørre Voldgade 21, Copenhagen, Denmark",
+    "contactInfo": {
+      "name": "Anders Jensen",
+      "email": "anders@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Palace View Hotel",
+    "description": "Admire the view of Sintra's palaces from this hotel",
+    "location": {
+      "latitude": 38.7977,
+      "longitude": -9.3947
+    },
+    "address": "Rua do Comércio 12, Sintra, Portugal",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@palaceviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Townhouse",
+    "description": "Charming townhouse in the heart of Sintra",
+    "location": {
+      "latitude": 38.7992,
+      "longitude": -9.3895
+    },
+    "address": "Largo Rainha Dona Amélia 7, Sintra, Portugal",
+    "contactInfo": {
+      "name": "Ana Silva",
+      "email": "ana@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "City Center Hotel",
+    "description": "Conveniently located hotel in the heart of Brno",
+    "location": {
+      "latitude": 49.1951,
+      "longitude": 16.6068
+    },
+    "address": "Masarykova 5, Brno, Czech Republic",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@citycenterhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Modern Loft Apartment",
+    "description": "Stylish loft with city views in Brno",
+    "location": {
+      "latitude": 49.1965,
+      "longitude": 16.6081
+    },
+    "address": "Koblížná 18, Brno, Czech Republic",
+    "contactInfo": {
+      "name": "Jan Novák",
+      "email": "jan@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Fjordview Hotel",
+    "description": "Breathtaking views of the fjord from this hotel",
+    "location": {
+      "latitude": 60.1233,
+      "longitude": 6.7405
+    },
+    "address": "Skjeggedal 12, Odda, Norway",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@fjordviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Cabin Retreat",
+    "description": "Escape to a cozy cabin near Trolltunga",
+    "location": {
+      "latitude": 60.1252,
+      "longitude": 6.7439
+    },
+    "address": "Trolltungavegen 8, Odda, Norway",
+    "contactInfo": {
+      "name": "Lena Hansen",
+      "email": "lena@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Bayview Hotel Kotor",
+    "description": "Enjoy the beauty of Kotor Bay from this hotel",
+    "location": {
+      "latitude": 42.4246,
+      "longitude": 18.7712
+    },
+    "address": "Trg od oruzja bb, Kotor, Montenegro",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@bayviewkotor.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Old Town House",
+    "description": "Charming house in the heart of Kotor's Old Town",
+    "location": {
+      "latitude": 42.4234,
+      "longitude": 18.7719
+    },
+    "address": "Stari Grad 15, Kotor, Montenegro",
+    "contactInfo": {
+      "name": "Nikola Petrovic",
+      "email": "nikola@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Seaside Retreat Hotel",
+    "description": "Relax by the sea at Saint-Malo's premier retreat",
+    "location": {
+      "latitude": 48.6495,
+      "longitude": -2.0257
+    },
+    "address": "Quai Duguay-Trouin 24, Saint-Malo, France",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@seasideretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Quaint Coastal Cottage",
+    "description": "Charming cottage with sea views in Saint-Malo",
+    "location": {
+      "latitude": 48.6483,
+      "longitude": -2.0265
+    },
+    "address": "Rue de la Crosse 9, Saint-Malo, France",
+    "contactInfo": {
+      "name": "Sophie Leclerc",
+      "email": "sophie@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Cliffside Hotel Ronda",
+    "description": "Spectacular views from a cliffside hotel in Ronda",
+    "location": {
+      "latitude": 36.742,
+      "longitude": -5.167
+    },
+    "address": "Calle de Arminán 7, Ronda, Spain",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@cliffsideronda.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Traditional Spanish Villa",
+    "description": "Experience Ronda in a traditional Spanish villa",
+    "location": {
+      "latitude": 36.7428,
+      "longitude": -5.1678
+    },
+    "address": "Calle Real 22, Ronda, Spain",
+    "contactInfo": {
+      "name": "Carlos Fernandez",
+      "email": "carlos@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Royal Castle Hotel",
+    "description": "A regal experience near Vaduz Castle",
+    "location": {
+      "latitude": 47.141,
+      "longitude": 9.5215
+    },
+    "address": "Schlossberg 15, Vaduz, Liechtenstein",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@royalcastlehotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Alpine Chalet",
+    "description": "Escape to a charming chalet in the mountains",
+    "location": {
+      "latitude": 47.1425,
+      "longitude": 9.5232
+    },
+    "address": "Bergweg 8, Vaduz, Liechtenstein",
+    "contactInfo": {
+      "name": "Eva Müller",
+      "email": "eva@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Waterfall View Hotel",
+    "description": "Enjoy the beauty of Edessa's waterfalls from this hotel",
+    "location": {
+      "latitude": 40.8032,
+      "longitude": 22.0474
+    },
+    "address": "Dikastirion Square 12, Edessa, Greece",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@waterfallviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Riverside Cabin Retreat",
+    "description": "Cozy cabin with a view of Edessa's river",
+    "location": {
+      "latitude": 40.8039,
+      "longitude": 22.0488
+    },
+    "address": "Riverside Lane 5, Edessa, Greece",
+    "contactInfo": {
+      "name": "Nikos Papadopoulos",
+      "email": "nikos@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Palatial Retreat Hotel",
+    "description": "Experience luxury near Drottningholm Palace",
+    "location": {
+      "latitude": 59.3225,
+      "longitude": 17.9025
+    },
+    "address": "Kungliga Parken 3, Drottningholm, Sweden",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@palatialretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Historic Palace Apartment",
+    "description": "Stay in an apartment with views of the palace",
+    "location": {
+      "latitude": 59.3218,
+      "longitude": 17.9013
+    },
+    "address": "Slottsvägen 10, Drottningholm, Sweden",
+    "contactInfo": {
+      "name": "Maria Andersson",
+      "email": "maria@example.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Oceanfront Hotel Guernsey",
+    "description": "Enjoy panoramic views of the ocean",
+    "location": {
+      "latitude": 49.4659,
+      "longitude": -2.5859
+    },
+    "address": "Cliffside Avenue 22, St. Peter Port, Guernsey",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@oceanfronthotel.gg"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Seaview Cottage",
+    "description": "Charming cottage with a view of the sea",
+    "location": {
+      "latitude": 49.4672,
+      "longitude": -2.5846
+    },
+    "address": "Harbor Lane 8, St. Peter Port, Guernsey",
+    "contactInfo": {
+      "name": "Lorraine Smith",
+      "email": "lorraine@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Linksview Hotel",
+    "description": "Overlooking the famous golf course in Saint Andrews",
+    "location": {
+      "latitude": 56.3393,
+      "longitude": -2.7965
+    },
+    "address": "The Scores 18, St. Andrews, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@linksviewhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Old Town House",
+    "description": "Quaint house in the heart of Saint Andrews",
+    "location": {
+      "latitude": 56.3385,
+      "longitude": -2.7982
+    },
+    "address": "Market Street 15, St. Andrews, United Kingdom",
+    "contactInfo": {
+      "name": "John Robertson",
+      "email": "john@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Mediterranean View Hotel",
+    "description": "Panoramic views of the Mediterranean in Paphos",
+    "location": {
+      "latitude": 34.772,
+      "longitude": 32.4299
+    },
+    "address": "Poseidonos Avenue 8, Paphos, Cyprus",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@mediterraneanview.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Sunset Villa",
+    "description": "Watch the sunset from a beautiful villa in Paphos",
+    "location": {
+      "latitude": 34.7728,
+      "longitude": 32.4285
+    },
+    "address": "Aphrodite Street 25, Paphos, Cyprus",
+    "contactInfo": {
+      "name": "Anna Antoniou",
+      "email": "anna@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Alpine Retreat Hotel",
+    "description": "Experience the beauty of the Swiss Alps",
+    "location": {
+      "latitude": 46.5933,
+      "longitude": 7.9085
+    },
+    "address": "Alpstrasse 12, Lauterbrunnen, Switzerland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@alpineretreat.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cozy Mountain Cabin",
+    "description": "A charming cabin with mountain views",
+    "location": {
+      "latitude": 46.5921,
+      "longitude": 7.9068
+    },
+    "address": "Mountain Lane 5, Lauterbrunnen, Switzerland",
+    "contactInfo": {
+      "name": "Hans Müller",
+      "email": "hans@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Grand Cathedral Hotel",
+    "description": "Stay in the heart of Amiens with a view of the cathedral",
+    "location": {
+      "latitude": 49.8941,
+      "longitude": 2.3026
+    },
+    "address": "Cathedral Square 8, Amiens, France",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@grandcathedralhotel.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Quaint City Apartment",
+    "description": "Charming apartment in the historic district",
+    "location": {
+      "latitude": 49.8935,
+      "longitude": 2.3042
+    },
+    "address": "Rue de la Paix 15, Amiens, France",
+    "contactInfo": {
+      "name": "Sophie Martin",
+      "email": "sophie@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Riverside Castle Hotel",
+    "description": "Experience medieval charm along the river",
+    "location": {
+      "latitude": 48.8127,
+      "longitude": 14.3173
+    },
+    "address": "Riverside Street 20, Cesky Krumlov, Czech Republic",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@riversidecastle.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Charming Old Town House",
+    "description": "Stay in a historic house in the heart of the town",
+    "location": {
+      "latitude": 48.8121,
+      "longitude": 14.3158
+    },
+    "address": "Old Town Square 10, Cesky Krumlov, Czech Republic",
+    "contactInfo": {
+      "name": "Petr Novak",
+      "email": "petr@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Turquoise Coast Resort",
+    "description": "Relax on the beautiful Turquoise Coast",
+    "location": {
+      "latitude": 36.8969,
+      "longitude": 30.7133
+    },
+    "address": "Coastal Boulevard 45, Antalya, Turkey",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@turquoiseresort.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Seaside Villa",
+    "description": "Villa with direct access to the beach",
+    "location": {
+      "latitude": 36.8975,
+      "longitude": 30.7118
+    },
+    "address": "Beachfront Lane 12, Antalya, Turkey",
+    "contactInfo": {
+      "name": "Ayse Demir",
+      "email": "ayse@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Countryside Manor Hotel",
+    "description": "Escape to the peaceful countryside of The Cotswolds",
+    "location": {
+      "latitude": 51.8969,
+      "longitude": -1.6355
+    },
+    "address": "Meadow Lane 7, The Cotswolds, United Kingdom",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@countrysidemanor.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Quaint Cottage Retreat",
+    "description": "Charming cottage with garden views",
+    "location": {
+      "latitude": 51.8962,
+      "longitude": -1.6369
+    },
+    "address": "Cottage Lane 3, The Cotswolds, United Kingdom",
+    "contactInfo": {
+      "name": "David Johnson",
+      "email": "david@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Riverside Boutique Hotel",
+    "description": "Enjoy a tranquil stay by the river in Porvoo",
+    "location": {
+      "latitude": 60.392,
+      "longitude": 25.6652
+    },
+    "address": "Riverside Avenue 18, Porvoo, Finland",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@riversideboutique.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Cosy Old Town Apartment",
+    "description": "Charming apartment in Porvoo's historic Old Town",
+    "location": {
+      "latitude": 60.3915,
+      "longitude": 25.6641
+    },
+    "address": "Old Town Square 5, Porvoo, Finland",
+    "contactInfo": {
+      "name": "Elena Järvinen",
+      "email": "elena@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  },
+  {
+    "type": "hotel",
+    "name": "Adriatic View Hotel",
+    "description": "Savor stunning views of the Adriatic Sea in Piran",
+    "location": {
+      "latitude": 45.527,
+      "longitude": 13.5681
+    },
+    "address": "Adriatic Promenade 22, Piran, Slovenia",
+    "contactInfo": {
+      "name": "Hotel Reservations",
+      "email": "info@adriaticview.com"
+    },
+    "isBreakfastIncluded": true,
+    "possibleExtras": []
+  },
+  {
+    "type": "airbnb",
+    "name": "Seaside Studio Apartment",
+    "description": "Studio with a balcony overlooking the sea",
+    "location": {
+      "latitude": 45.5265,
+      "longitude": 13.5698
+    },
+    "address": "Seaside Lane 10, Piran, Slovenia",
+    "contactInfo": {
+      "name": "Mateja Novak",
+      "email": "mateja@example.com"
+    },
+    "isBreakfastIncluded": false,
+    "possibleExtras": []
+  }
+]
