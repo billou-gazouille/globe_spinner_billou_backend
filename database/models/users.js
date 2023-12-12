@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     nameOnCard: String,
     cardNumber: String,
     expiryDate: Date,
-    ccv: String,
+    cvv: String,
   },
 });
 
