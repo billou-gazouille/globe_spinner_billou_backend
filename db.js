@@ -33,6 +33,8 @@ const [collectionName, action, number] = args;
 
 //console.log(collectionName, action, number);
 
+const logDeletedMsg = (q) => console.log(`deleted ${q.deletedCount} ${collectionName}`);
+
 if (action === 'create'){
   const creations = [];
 
@@ -69,10 +71,24 @@ if (action === 'create'){
 
 else if (action === 'clear'){
   if (collectionName === 'accommodation_bases')
-    clearAccommodationBases();
+    clearAccommodationBases().then(q => logDeletedMsg(q));
   else if (collectionName === 'accommodation_extras')
-    clearAccommodationExtras();
+    clearAccommodationExtras().then(q => logDeletedMsg(q));
   else if (collectionName === 'accommodation_slots')
-    clearAccommodationSlots();
+    clearAccommodationSlots().then(q => logDeletedMsg(q));
+
+  if (collectionName === 'activity_bases')
+    clearActivityBases().then(q => logDeletedMsg(q));
+  else if (collectionName === 'activity_extras')
+    clearActivityExtras().then(q => logDeletedMsg(q));
+  else if (collectionName === 'activity_slots')
+    clearActivitySlots().then(q => logDeletedMsg(q));
+
+  if (collectionName === 'transport_bases')
+    clearTransportBases().then(q => logDeletedMsg(q));
+  else if (collectionName === 'transport_extras')
+    clearTransportExtras().then(q => logDeletedMsg(q));
+  else if (collectionName === 'transport_slots')
+    clearTransportSlots().then(q => logDeletedMsg(q));
 }
 

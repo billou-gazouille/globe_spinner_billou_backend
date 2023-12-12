@@ -24,6 +24,7 @@ const generateActivityBase = async () => {
 };
 
 const clearActivityBases = () => {
+    console.log('here');
     return ActivityBase.deleteMany();
 };
 

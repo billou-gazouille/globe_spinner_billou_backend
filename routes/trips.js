@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+<<<<<<< HEAD
 const { saveTrip } = require("./savedtrips");
 
 const Trip = require("../models/trip");
@@ -59,3 +60,10 @@ router.get("/generate", async (req, res) => {
 
 module.exports = router;
 module.exports = { tripA, tripB };
+=======
+const AccomodationSlot = require("../database/models/accommodation/accommodationSlots");
+
+router.get("/newAccomodation", (req, res) => {});
+
+module.exports = router;
+>>>>>>> 14513ef019cfc3ffa733e8d0b647913530b21276
