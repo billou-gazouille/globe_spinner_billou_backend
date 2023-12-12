@@ -30,7 +30,7 @@ router.post("/signup", (req, res) => {
         bankCard: {
           cardNumber: "",
           expiryDate: new Date("9999-12-31T23:59:59"),
-          code: "",
+          CVV: String,
         },
       });
 
@@ -99,6 +99,47 @@ router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
     { $push: { reservedTrips: savedTrip._id } }
   );
   return res.json({ savedTrip, updateResult });
+});
+
+
+
+
+
+router.post("/:userToken/addPaiyementInfo", async (req, res) => {
+  try {
+    const user = await User.findById(userToken);
+
+    const userToken = req.params.userToken;
+    const { nameOnCard, cardNumber, expiryDate, code } = req.body;
+
+    if (!user) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Utilisateur non trouvé" });
+    }
+
+    user.bankCardInfo.nameOnCard = nameOnCard;
+    user.bankCardInfo.cardNumber = cardNumber;
+    user.bankCardInfo.expiryDate = new Date(expiryDate);
+    user.bankCardInfo.code = code;
+
+    await user.save();
+
+    res
+      .status(200)
+      .json({
+        success: true,
+        message: "Informations de paiement enregistrées avec succès",
+      });
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({
+        success: false,
+        message: "Erreur lors de l'enregistrement des informations de paiement",
+      });
+  }
 });
 
 module.exports = router;
