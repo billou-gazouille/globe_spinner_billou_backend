@@ -74,45 +74,37 @@ router.post("/generate", async (req, res) => {
   //l'adresse de l'utilisateur renseignée + de générer aléatoirement un lieu d'arrivée.
   const data = await Destination.find();
 
-  const locations = data.map((e) => {
-    return {
-      id: e._id,
-      name: e.name,
-      lat: e.centerLocation.latitude,
-      lon: e.centerLocation.longitude,
-      distance: calculateDistance(
-        e.centerLocation.latitude,
-        e.centerLocation.longitude,
-        filters.lat,
-        filters.lon
-      ),
-    };
-  });
-  const sortedlocations = locations.sort((a, b) => {
-    return a.distance - b.distance;
-  });
-  const destinationIndex =
-    Math.floor(Math.random() * sortedlocations.length) + 1;
-  const destination = sortedlocations[destinationIndex];
-  const departureLocation = sortedlocations[0];
+  const locations = data
+    .map((e) => {
+      return {
+        id: e._id,
+        name: e.name,
+        lat: e.centerLocation.latitude,
+        lon: e.centerLocation.longitude,
+        distance: calculateDistance(
+          e.centerLocation.latitude,
+          e.centerLocation.longitude,
+          filters.lat,
+          filters.lon
+        ),
+      };
+    })
+    .sort((a, b) => a.distance - b.distance); // trie du plus proche au plus lointain
+  const destinationIndex = Math.floor(Math.random() * locations.length) + 1;
+  const destination = locations[destinationIndex];
+  const departureLocation = locations[0];
   // ----------- fin de la première section -----------
 
   const transports = await TransportSlot.find({
     "departure.place": departureLocation.id,
     "arrival.place": destination.id,
+    "departure.date": {
+      $gte: moment(filters.departureMin).toDate(),
+      $lte: moment(filters.departureMax).toDate(),
+    },
   });
 
-  const test = transports.filter((e) => {
-    const dateTransport = moment(e.departure.date).format("YYYY-MM-DD"); // transforme la date de départ du trajet en format string
-    return (
-      moment(dateTransport).isBetween(
-        filters.departureMin,
-        filters.departureMax
-      ) === true
-    );
-  });
-
-  res.json(test.length);
+  res.json(transports.length);
 });
 
 (module.exports = router), { tripA, tripB };
