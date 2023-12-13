@@ -1,9 +1,11 @@
 var express = require("express");
 var router = express.Router();
+const moment = require("moment");
 // const { saveTrip } = require("./savedtrips");
 
 const Trip = require("../database/models/trips");
 const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
+const TransportSlot = require("../database/models/transport/transportSlots");
 const Destination = require("../database/models/destinations");
 const { tripA, tripB } = require("../exampleTrips");
 let trips = [tripA, tripB];
@@ -74,14 +76,15 @@ router.post("/generate", async (req, res) => {
 
   const locations = data.map((e) => {
     return {
+      id: e._id,
       name: e.name,
       lat: e.centerLocation.latitude,
       lon: e.centerLocation.longitude,
       distance: calculateDistance(
         e.centerLocation.latitude,
         e.centerLocation.longitude,
-        filters.latitude,
-        filters.longitude
+        filters.lat,
+        filters.lon
       ),
     };
   });
@@ -92,12 +95,24 @@ router.post("/generate", async (req, res) => {
     Math.floor(Math.random() * sortedlocations.length) + 1;
   const destination = sortedlocations[destinationIndex];
   const departureLocation = sortedlocations[0];
-  // fin de la première section
+  // ----------- fin de la première section -----------
 
-  // cette deuxième section doit permettre de trouver un trajet parmi la liste des destinations
-  //qui a été générée puis de les filtrer par budget/temps de trajet
+  const transports = await TransportSlot.find({
+    "departure.place": departureLocation.id,
+    "arrival.place": destination.id,
+  });
 
-  return;
+  const test = transports.filter((e) => {
+    const dateTransport = moment(e.departure.date).format("YYYY-MM-DD"); // transforme la date de départ du trajet en format string
+    return (
+      moment(dateTransport).isBetween(
+        filters.departureMin,
+        filters.departureMax
+      ) === true
+    );
+  });
+
+  res.json(test.length);
 });
 
 (module.exports = router), { tripA, tripB };
