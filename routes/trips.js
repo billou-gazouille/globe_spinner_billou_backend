@@ -95,6 +95,9 @@ router.post("/generate", async (req, res) => {
   const departureLocation = sortedlocations[0];
   // fin de la première section
 
+  // cette deuxième section doit permettre de trouver un trajet parmi la liste des destinations
+  //qui a été générée puis de les filtrer par budget/temps de trajet
+
   return;
 });
 
