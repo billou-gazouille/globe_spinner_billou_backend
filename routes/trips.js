@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
-const { saveTrip } = require("./savedtrips");
+// const { saveTrip } = require("./savedtrips");
 
-const Trip = require("../models/trip");
-const AccommodationSlot = require("../models/accommodationSlot");
+const Trip = require("../database/models/trips");
+const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
 
 const { tripA, tripB } = require("../exampleTrips");
 let trips = [tripA, tripB];
@@ -54,5 +54,5 @@ router.get("/generate", async (req, res) => {
   // c'est ici qu'on creer tripA et tripB
 });
 
-module.exports = router;
-module.exports = { tripA, tripB };
+(module.exports = router), { tripA, tripB };
+// module.exports = { tripA, tripB };
