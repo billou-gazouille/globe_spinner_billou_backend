@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("./database/connection");
 
 var express = require("express");
 var path = require("path");
@@ -8,7 +9,6 @@ var logger = require("morgan");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var tripsRouter = require("./routes/trips");
-require("./database/connection");
 
 var app = express();
 
