@@ -75,8 +75,8 @@ const generateTransportSlot = async () => {
     const duration = getRandomValue(20, 500);   // entre 20 min et 500 min
     const arrivalDate = moment(departureDate.toISOString()).add(duration, 'minutes').toDate();
 
-    const secondClassPrice = getRandomValue(20, 200);
-    const firstClassPrice = secondClassPrice * 1.4;
+    const secondClassPrice = getRandomValue(10, 100);
+    const firstClassPrice = secondClassPrice * 1.25;
 
     const obj = {
         transportBase: new ObjectId(randomTransportBase._id),

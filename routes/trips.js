@@ -109,8 +109,4 @@ router.post("/generate", async (req, res) => {
   res.json(transports.length);
 });
 
-<<<<<<< HEAD
-module.exports = router, { tripA, tripB };
-=======
 (module.exports = router), { tripA, tripB };
->>>>>>> b9ef8f3d22440231062d19fb6ef0487fe43379db
