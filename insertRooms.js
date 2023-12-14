@@ -1,14 +1,14 @@
-require("dotenv").config();
-require("../../connection");
+require("./database/connection");
 
-const AccommodationRoom = require("../../models/accommodation/accommodationRooms");
-const AccommodationBase = require("../../models/accommodation/accommodationBases");
+const AccommodationRoom = require("./database/models/accommodation/accommodationRooms");
+const AccommodationBase = require("./database/models/accommodation/accommodationBases");
 
-function generateRandomNumber(max) {
-  return Math.floor(Math.random() * max) + 1;
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 function generateRoomNumber() {
-  const randomNbr = generateRandomNumber(99);
+  const randomNbr = generateRandomNumber(1, 99);
   const randomLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
   const roomNbr = randomNbr.toString().padStart(2, "0") + randomLetter;
 
@@ -20,22 +20,22 @@ const generateAccommodationRoom = async () => {
 
   for (let i = 0; i < accommodationBases.length; i++) {
     if (accommodationBases[i].type === "airbnb") {
-      for (let i = 0; i < generateRandomNumber(3); i++) {
+      for (let i = 0; i < generateRandomNumber(1, 3); i++) {
         const newRoom = new AccommodationRoom({
           accommodationBase: accommodationBases[i]._id,
           roomNb: "N/A",
           bookings: [],
-          maxNbPeople: generateRandomNumber(6),
+          maxNbPeople: generateRandomNumber(2, 6),
         });
         await newRoom.save();
       }
     } else {
-      for (let i = 0; i < generateRandomNumber(99); i++) {
+      for (let i = 0; i < generateRandomNumber(20, 99); i++) {
         const newRoom = new AccommodationRoom({
           accommodationBase: accommodationBases[i]._id,
           roomNb: generateRoomNumber(),
           bookings: [],
-          maxNbPeople: generateRandomNumber(6),
+          maxNbPeople: generateRandomNumber(2, 6),
         });
         await newRoom.save();
       }
@@ -45,12 +45,3 @@ const generateAccommodationRoom = async () => {
 };
 
 generateAccommodationRoom();
-
-const clearAccommodationRooms = () => {
-  return AccommodationRoom.deleteMany();
-};
-
-module.exports = {
-  generateAccommodationRoom,
-  clearAccommodationRooms,
-};

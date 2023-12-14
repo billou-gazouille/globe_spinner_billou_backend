@@ -94,12 +94,14 @@ router.post("/generate", async (req, res) => {
   const departureLocation = locations[0];
   // ----------- fin de la première section -----------
 
-  // RECUPERATION ALLERS RETOURS
+  // RECUPERATION DES ALLERS RETOURS
+  const numberOfTravelers = filters.nbrOfTravelers;
 
   const findTransportSlots = async (
     departurePlace,
     arrivalPlace,
-    departureDateRange
+    departureDateRange,
+    numberOfTravelers
   ) => {
     return await TransportSlot.find({
       "departure.place": departurePlace,
@@ -107,6 +109,17 @@ router.post("/generate", async (req, res) => {
       "departure.date": {
         $gte: departureDateRange.min,
         $lte: departureDateRange.max,
+      },
+      $expr: {
+        $gte: [
+          {
+            $sum: [
+              "$firstClass.nbRemainingSeats",
+              "$secondClass.nbRemainingSeats",
+            ],
+          },
+          numberOfTravelers,
+        ],
       },
     });
   };
@@ -124,45 +137,54 @@ router.post("/generate", async (req, res) => {
   const outboundJourneys = await findTransportSlots(
     departureLocation.id,
     destination.id,
-    departureDateRangeOutbound
+    departureDateRangeOutbound,
+    numberOfTravelers
   );
 
   const inboundJourneys = await findTransportSlots(
     destination.id,
     departureLocation.id,
-    departureDateRangeInbound
+    departureDateRangeInbound,
+    numberOfTravelers
   );
 
   const totalBudget = filters.budget;
   const validCombinations = [];
   const classes = ["firstClass", "secondClass"];
-  // const transportClass = filters.class;
 
-  for (let transportClass of classes) {
+  for (let outboundClass of classes) {
     for (let outboundJourney of outboundJourneys) {
-      for (let inboundJourney of inboundJourneys) {
-        const totalCost =
-          outboundJourney[transportClass].price +
-          inboundJourney[transportClass].price;
+      const outboundPrice = outboundJourney[outboundClass].price;
+      const outboundSeatsFirst = outboundJourney.firstClass.nbRemainingSeats;
+      for (let inboundClass of classes) {
+        for (let inboundJourney of inboundJourneys) {
+          const inboundPrice = inboundJourney[inboundClass].price;
+          const totalCost = outboundPrice + inboundPrice;
 
-        if (totalCost <= totalBudget / 3) {
-          validCombinations.push({
-            outboundJourney,
-            inboundJourney,
-            transportClass,
-            totalCost: totalCost.toFixed(2),
-          });
+          if (totalCost <= totalBudget / 3) {
+            validCombinations.push({
+              // outboundJourney: outboundJourney._id,
+              // inboundJourney: inboundJourney._id,
+              outboundSeatsFirst,
+              // availableSeats_aller:
+              //   outboundJourney.firstClass.nbRemainingSeats +
+              //   outboundJourney.secondClass.availableSeats,
+              // availableSeats_retour:
+              //   inboundJourney.firstClass.availableSeats +
+              //   inboundJourney.secondClass.availableSeats,
+              outboundClass,
+              inboundClass,
+              totalCost: totalCost.toFixed(2),
+            });
+          }
         }
       }
     }
   }
+  validCombinations.sort((a, b) => a.totalCost - b.totalCost);
+  // ----------- fin allers retours -----------
 
-  res.json({
-    nbrCombinations: validCombinations.length,
-    validCombinations,
-    nbrOutbound: outboundJourneys.length,
-    nbrInbound: inboundJourneys.length,
-  });
+  res.json({ /*allers_retours: validCombinations.length,*/ validCombinations });
 });
 
 (module.exports = router), { tripA, tripB };
