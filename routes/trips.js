@@ -72,8 +72,7 @@ const calculateDistance = (lat1, lon1, lat2, lon2) => {
 //
 router.post("/generate", async (req, res) => {
   const filters = req.body;
-  //Cette première section permet de donner le lieu de départ (aéroport, gare, etc.) le plus proche de
-  //l'adresse de l'utilisateur renseignée + de générer aléatoirement un lieu d'arrivée.
+  //Cherche le lieu de départ (aéroport, gare, etc.) le plus proche de l'adresse de l'utilisateur renseignée + de générer aléatoirement la destination.
   const data = await Destination.find();
 
   const locations = data
@@ -97,16 +96,75 @@ router.post("/generate", async (req, res) => {
   const departureLocation = locations[0];
   // ----------- fin de la première section -----------
 
-  const transports = await TransportSlot.find({
-    "departure.place": departureLocation.id,
-    "arrival.place": destination.id,
-    "departure.date": {
-      $gte: moment(filters.departureMin).toDate(),
-      $lte: moment(filters.departureMax).toDate(),
-    },
-  });
+  // RECUPERATION ALLERS RETOURS
 
-  res.json(transports.length);
+  const findTransportSlots = async (
+    departurePlace,
+    arrivalPlace,
+    departureDateRange
+  ) => {
+    return await TransportSlot.find({
+      "departure.place": departurePlace,
+      "arrival.place": arrivalPlace,
+      "departure.date": {
+        $gte: departureDateRange.min,
+        $lte: departureDateRange.max,
+      },
+    });
+  };
+
+  const departureDateRangeOutbound = {
+    min: moment(filters.departureMinOutbound).toDate(),
+    max: moment(filters.departureMaxOutbound).toDate(),
+  };
+
+  const departureDateRangeInbound = {
+    min: moment(filters.departureMinInbound).toDate(),
+    max: moment(filters.departureMaxInbound).toDate(),
+  };
+
+  const outboundJourneys = await findTransportSlots(
+    departureLocation.id,
+    destination.id,
+    departureDateRangeOutbound
+  );
+
+  const inboundJourneys = await findTransportSlots(
+    destination.id,
+    departureLocation.id,
+    departureDateRangeInbound
+  );
+
+  const totalBudget = filters.budget;
+  const validCombinations = [];
+  const classes = ["firstClass", "secondClass"];
+  // const transportClass = filters.class;
+
+  for (let transportClass of classes) {
+    for (let outboundJourney of outboundJourneys) {
+      for (let inboundJourney of inboundJourneys) {
+        const totalCost =
+          outboundJourney[transportClass].price +
+          inboundJourney[transportClass].price;
+
+        if (totalCost <= totalBudget / 3) {
+          validCombinations.push({
+            outboundJourney,
+            inboundJourney,
+            transportClass,
+            totalCost: totalCost.toFixed(2),
+          });
+        }
+      }
+    }
+  }
+
+  res.json({
+    nbrCombinations: validCombinations.length,
+    validCombinations,
+    nbrOutbound: outboundJourneys.length,
+    nbrInbound: inboundJourneys.length,
+  });
 });
 
 (module.exports = router), { tripA, tripB };
