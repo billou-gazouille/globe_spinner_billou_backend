@@ -4,6 +4,7 @@ var router = express.Router();
 //const AccommodationSlot = require("../database/models/accommodationRooms");
 
 const moment = require("moment");
+const { isPointWithinRadius } = require("../modules/checkDistance");
 
 const Trip = require("../database/models/trips");
 const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
@@ -73,9 +74,9 @@ const calculateDistance = (lat1, lon1, lat2, lon2) => {
 router.post("/generate", async (req, res) => {
   const filters = req.body;
   //Cherche le lieu de départ (aéroport, gare, etc.) le plus proche de l'adresse de l'utilisateur renseignée + de générer aléatoirement la destination.
-  const data = await Destination.find();
+  const destinations = await Destination.find();
 
-  const locations = data
+  const locations = destinations
     .map((e) => {
       return {
         id: e._id,
@@ -97,7 +98,7 @@ router.post("/generate", async (req, res) => {
   const departureLocation = locations[0];
   // ----------- fin de la première section -----------
 
-  // RECUPERATION DES ALLERS RETOURS
+  // ----------- GENERATION DES ALLERS RETOURS -----------
   const numberOfTravelers = Number(filters.nbrOfTravelers);
 
   const findTransportSlots = async (
@@ -124,6 +125,9 @@ router.post("/generate", async (req, res) => {
           foreignField: "_id",
           as: "transportBase",
         },
+      },
+      {
+        $unwind: "$transportBase",
       },
       {
         $addFields: {
@@ -174,26 +178,34 @@ router.post("/generate", async (req, res) => {
   for (let outboundClass of classes) {
     for (let outboundJourney of outboundJourneys) {
       const outboundPrice = outboundJourney[outboundClass].price;
-      const outboundSeats =
-        outboundJourney.firstClass.nbRemainingSeats +
-        outboundJourney.secondClass.nbRemainingSeats;
+      // const outboundSeats =
+      //   outboundJourney.firstClass.nbRemainingSeats +
+      //   outboundJourney.secondClass.nbRemainingSeats;
       for (let inboundClass of classes) {
         for (let inboundJourney of inboundJourneys) {
           const inboundPrice = inboundJourney[inboundClass].price;
-          const inboundSeats =
-            inboundJourney.firstClass.nbRemainingSeats +
-            inboundJourney.secondClass.nbRemainingSeats;
+          // const inboundSeats =
+          //   inboundJourney.firstClass.nbRemainingSeats +
+          //   inboundJourney.secondClass.nbRemainingSeats;
 
           const totalCost = outboundPrice + inboundPrice;
 
           if (totalCost <= totalBudget / 3) {
             validCombinations.push({
-              outboundJourney: outboundJourney.transportBase[0].type,
-              inboundJourney: inboundJourney.transportBase[0].type,
-              outboundSeats,
-              inboundSeats,
-              outboundClass,
-              inboundClass,
+              outboundJourney: {
+                type: outboundJourney.transportBase.type,
+                class: outboundClass,
+                departure: outboundJourney.departure.date,
+                arrival: outboundJourney.arrival.date,
+                price: outboundPrice.toFixed(2),
+              },
+              inboundJourney: {
+                type: inboundJourney.transportBase.type,
+                class: inboundClass,
+                departure: inboundJourney.departure.date,
+                arrival: inboundJourney.arrival.date,
+                price: inboundPrice.toFixed(2),
+              },
               totalCost: totalCost.toFixed(2),
             });
           }
@@ -204,10 +216,83 @@ router.post("/generate", async (req, res) => {
   validCombinations.sort((a, b) => a.totalCost - b.totalCost);
   // ----------- fin allers retours -----------
 
-  res.json({
+  // ----------- GENERATION DU LOGEMENT -----------
+  // Check location, Check availability based on transport, check nbr of people, check budget
+  if (validCombinations.length == 0) {
+    return res.json("no journey found");
+  }
+
+  const arrival = moment
+    .utc(validCombinations[0].outboundJourney.arrival)
+    .startOf("day");
+  const departure = moment
+    .utc(validCombinations[0].inboundJourney.departure)
+    .startOf("day");
+
+  const nbrOfNights = Math.abs(departure.diff(arrival, "days"));
+
+  const budgetByNights = totalBudget / 3 / nbrOfNights;
+
+  const accomodations = await AccommodationRooms.aggregate([
+    {
+      $match: {
+        maxNbPeople: { $gte: numberOfTravelers },
+        basePricePerNight: { $lte: budgetByNights },
+        bookings: {
+          $not: {
+            $elemMatch: {
+              from: {
+                $lte: validCombinations[0].outboundJourney.arrival,
+              },
+              to: {
+                $gte: validCombinations[0].inboundJourney.departure,
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      $lookup: {
+        from: "accommodation_bases",
+        localField: "accommodationBase",
+        foreignField: "_id",
+        as: "accommodationBase",
+      },
+    },
+    {
+      $unwind: "$accommodationBase",
+    },
+    {
+      $addFields: {
+        locationArray: [
+          "$accommodationBase.location.longitude",
+          "$accommodationBase.location.latitude",
+        ],
+      },
+    },
+    {
+      $match: {
+        locationArray: {
+          $geoWithin: {
+            $centerSphere: [[destination.lon, destination.lat], 10 / 6371],
+          },
+        },
+      },
+    },
+  ]);
+
+  if (accomodations.length == 0) {
+    return res.json({ error: "no accomodations found", destination });
+  }
+
+  return res.json({
     destination,
-    nbrCombinations: validCombinations.length,
-    validCombinations,
+    // nbrCombinations: validCombinations.length,
+    // validCombinations,
+    accomodations,
+    nbr: accomodations.length,
+    nbrOfNights,
   });
 });
 

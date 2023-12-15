@@ -20,21 +20,25 @@ const generateAccommodationRoom = async () => {
 
   for (let i = 0; i < accommodationBases.length; i++) {
     if (accommodationBases[i].type === "airbnb") {
-      for (let i = 0; i < generateRandomNumber(1, 3); i++) {
+      for (let j = 0; j < generateRandomNumber(1, 3); j++) {
         const newRoom = new AccommodationRoom({
           accommodationBase: accommodationBases[i]._id,
           roomNb: "N/A",
           bookings: [],
+          basePricePerNight: generateRandomNumber(10, 50),
+          variations: [],
           maxNbPeople: generateRandomNumber(2, 6),
         });
         await newRoom.save();
       }
     } else {
-      for (let i = 0; i < generateRandomNumber(20, 99); i++) {
+      for (let j = 0; j < generateRandomNumber(50, 200); j++) {
         const newRoom = new AccommodationRoom({
           accommodationBase: accommodationBases[i]._id,
           roomNb: generateRoomNumber(),
           bookings: [],
+          basePricePerNight: generateRandomNumber(10, 50),
+          variations: [],
           maxNbPeople: generateRandomNumber(2, 6),
         });
         await newRoom.save();
