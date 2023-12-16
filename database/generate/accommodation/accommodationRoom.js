@@ -43,7 +43,7 @@ const generateAccommodationRoom = async () => {
   return console.log("end");
 };
 
-generateAccommodationRoom();
+//generateAccommodationRoom();
 
 const clearAccommodationRooms = () => {
   return AccommodationRoom.deleteMany();
