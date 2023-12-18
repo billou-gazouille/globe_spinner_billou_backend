@@ -13,7 +13,7 @@ const ActivitySlots = require("../database/models/activities/activitySlots");
 const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
 const TransportSlot = require("../database/models/transport/transportSlots");
 const Destination = require("../database/models/destinations");
-const { tripA, tripB } = require("../exampleTrips");
+// const { tripA, tripB } = require("../exampleTrips");
 let trips = [];
 
 // ROUTE GET POUR REGENERER ACCOMMODATION
@@ -58,6 +58,8 @@ router.get(
 router.get("/newTransport", async (req, res) => {});
 
 router.post("/generate", async (req, res) => {
+  trips = [];
+  console.log('creating 2 trips...');
   const filters = req.body;
   const totalBudget = filters.budget;
   const numberOfTravelers = Number(filters.nbrOfTravelers);
@@ -171,7 +173,8 @@ router.post("/generate", async (req, res) => {
     };
     trips.push(trip);
   }
-  return res.json(trips);
+    return res.json(trips);
 });
 
-(module.exports = router), { tripA, tripB };
+module.exports = router;
+module.exports.getTrips = () => trips;
