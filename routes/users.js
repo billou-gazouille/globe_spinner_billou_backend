@@ -8,7 +8,7 @@ const bcrypt = require("bcrypt");
 
 router.post("/signup", (req, res) => {
   //console
-  if (!checkBody(req.body, ["email", "password", "firstname", "lastname"])) {
+  if (!checkBody(req.body, ["email", "password", "firstName", "lastName"])) {
     res.json({ result: false, error: "Missing or empty fields" });
     return;
   }
@@ -20,8 +20,8 @@ router.post("/signup", (req, res) => {
       const hash = bcrypt.hashSync(req.body.password, 10);
 
       const newUser = new User({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         email: req.body.email,
         password: hash,
         token: uid2(32),
@@ -57,8 +57,8 @@ router.post("/signin", (req, res) => {
         result: true,
         token: data.token,
         email: data.email,
-        firstname: data.firstName,
-        lastname: data.lastName,
+        firstName: data.firstName,
+        lastName: data.lastName,
       });
     } else {
       return res.json({
@@ -121,7 +121,7 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
     if (!user) {
       return res
         .status(404)
-        .json({ success: false, message: "Utilisateur non trouvé" });
+        .json({ result: false, message: "Utilisateur non trouvé" });
     }
 
     user.bankCardInfo.nameOnCard = nameOnCard;
@@ -132,13 +132,13 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
     await user.save();
 
     res.status(200).json({
-      success: true,
+      result: true,
       message: "Informations de paiement enregistrées avec succès",
     });
   } catch (error) {
     console.error(error);
     res.status(500).json({
-      success: false,
+      result: false,
       message: "Erreur lors de l'enregistrement des informations de paiement",
     });
   }
