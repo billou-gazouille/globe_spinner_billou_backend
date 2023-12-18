@@ -142,4 +142,19 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
   }
 });
 
+router.post("/:userToken/resetPassword", async (req, res) => {
+  if (!checkBody(req.body, ["newPassword"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+  const newHash = bcrypt.hashSync(req.body.newPassword, 10);
+  const operation = await User.updateOne(
+    { token: req.params.userToken }, 
+    { password: newHash }
+  );
+  if (operation.modifiedCount === 0)
+    return res.json({ result: false, error: "Couldn't reset user's password" });
+  res.json({ result: true });
+});
+
 module.exports = router;
