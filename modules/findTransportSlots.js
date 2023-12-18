@@ -3,9 +3,10 @@ const findTransportSlots = async (
   departurePlace,
   arrivalPlace,
   departureDateRange,
-  numberOfTravelers
+  numberOfTravelers,
+  types
 ) => {
-  return await collection.aggregate([
+  return collection.aggregate([
     {
       $match: {
         "departure.place": departurePlace,
@@ -40,6 +41,9 @@ const findTransportSlots = async (
     {
       $match: {
         totalAvailableSeats: { $gte: numberOfTravelers },
+        "transportBase.type": {
+          $in: [types],
+        },
       },
     },
   ]);

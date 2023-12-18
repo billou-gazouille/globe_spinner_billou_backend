@@ -8,7 +8,7 @@ const findAccommodation = async (
 ) => {
   const budgetByNights = totalBudget / 3 / nbrOfNights;
 
-  const accomodations = await collection.aggregate([
+  const accommodations = await collection.aggregate([
     {
       $match: {
         maxNbPeople: { $gte: numberOfTravelers },
@@ -57,11 +57,11 @@ const findAccommodation = async (
     },
   ]);
 
-  if (accomodations == 0) {
+  if (accommodations == 0) {
     return false;
   }
-  const totalAccomodation = accomodations[0].basePricePerNight * nbrOfNights;
-  return { accomodation: accomodations[0], totalAccomodation };
+  const totalAccomodation = accommodations[0].basePricePerNight * nbrOfNights;
+  return { accommodation: accommodations[0], totalAccomodation };
 };
 
 module.exports = findAccommodation;
