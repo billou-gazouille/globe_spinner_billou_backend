@@ -59,98 +59,118 @@ router.get("/newTransport", async (req, res) => {});
 
 router.post("/generate", async (req, res) => {
   trips = [];
-  console.log('creating 2 trips...');
   const filters = req.body;
   const totalBudget = filters.budget;
   const numberOfTravelers = Number(filters.nbrOfTravelers);
   const classes = ["firstClass", "secondClass"];
+  const types = filters.types;
   let departureLocation;
   let nbrOfNights;
+  let timeoutPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(new Error("Timeout: Operation took too long."));
+    }, 20000); // 20 seconds timeout
+  });
+
+  console.log([types]);
 
   for (let i = 0; i <= 1; i++) {
-    let destination;
-    let validCombination;
-    let accommodation;
-    let activities;
+    let destination = null;
+    let validCombination = null;
+    let accommodation = null;
+    let activities = null;
 
-    while (!validCombination || !accommodation || !activities) {
-      // ----------- GENERATION DE LA DESTINATION -----------
+    try {
+      await Promise.race([
+        (async () => {
+          while (!validCombination || !accommodation || !activities) {
+            // ----------- GENERATION DE LA DESTINATION -----------
 
-      destination = (await getDestination(Destination, filters)).destination;
-      departureLocation = (await getDestination(Destination, filters))
-        .departureLocation;
+            destination = (await getDestination(Destination, filters))
+              .destination;
+            departureLocation = (await getDestination(Destination, filters))
+              .departureLocation;
 
-      // ----------- GENERATION DES ALLERS RETOURS -----------
+            // ----------- GENERATION DES ALLERS RETOURS -----------
 
-      const departureDateRangeOutbound = {
-        min: moment(filters.departureMinOutbound).toDate(),
-        max: moment(filters.departureMaxOutbound).toDate(),
-      };
+            const departureDateRangeOutbound = {
+              min: moment(filters.departureMinOutbound).toDate(),
+              max: moment(filters.departureMaxOutbound).toDate(),
+            };
 
-      const departureDateRangeInbound = {
-        min: moment(filters.departureMinInbound).toDate(),
-        max: moment(filters.departureMaxInbound).toDate(),
-      };
-      if (destination) {
-        const outboundJourneys = await findTransportSlots(
-          TransportSlot,
-          departureLocation.id,
-          destination.id,
-          departureDateRangeOutbound,
-          numberOfTravelers
-        );
+            const departureDateRangeInbound = {
+              min: moment(filters.departureMinInbound).toDate(),
+              max: moment(filters.departureMaxInbound).toDate(),
+            };
+            if (destination) {
+              const outboundJourneys = await findTransportSlots(
+                TransportSlot,
+                departureLocation.id,
+                destination.id,
+                departureDateRangeOutbound,
+                numberOfTravelers,
+                types
+              );
 
-        const inboundJourneys = await findTransportSlots(
-          TransportSlot,
-          destination.id,
-          departureLocation.id,
-          departureDateRangeInbound,
-          numberOfTravelers
-        );
+              const inboundJourneys = await findTransportSlots(
+                TransportSlot,
+                destination.id,
+                departureLocation.id,
+                departureDateRangeInbound,
+                numberOfTravelers,
+                types
+              );
 
-        validCombination = findJourney(
-          classes,
-          outboundJourneys,
-          inboundJourneys,
-          totalBudget
-        );
+              validCombination = findJourney(
+                classes,
+                outboundJourneys,
+                inboundJourneys,
+                totalBudget
+              );
 
-        // ----------- fin allers retours -----------
-        if (validCombination) {
-          // ----------- GENERATION DU LOGEMENT -----------
+              // ----------- fin allers retours -----------
+              if (validCombination) {
+                // ----------- GENERATION DU LOGEMENT -----------
 
-          const arrival = moment
-            .utc(validCombination.outboundJourney.arrival)
-            .startOf("day");
-          const departure = moment
-            .utc(validCombination.inboundJourney.departure)
-            .startOf("day");
+                const arrival = moment
+                  .utc(validCombination.outboundJourney.arrival)
+                  .startOf("day");
+                const departure = moment
+                  .utc(validCombination.inboundJourney.departure)
+                  .startOf("day");
 
-          nbrOfNights = Math.abs(departure.diff(arrival, "days"));
+                nbrOfNights = Math.abs(departure.diff(arrival, "days"));
 
-          accommodation = await findAccommodation(
-            AccommodationRooms,
-            numberOfTravelers,
-            nbrOfNights,
-            validCombination,
-            destination,
-            totalBudget
-          );
+                accommodation = await findAccommodation(
+                  AccommodationRooms,
+                  numberOfTravelers,
+                  nbrOfNights,
+                  validCombination,
+                  destination,
+                  totalBudget
+                );
 
-          // ----------- GENERATION DES ACTIVITES -----------
-          if (accommodation) {
-            activities = await findActivities(
-              ActivitySlots,
-              numberOfTravelers,
-              totalBudget,
-              arrival,
-              departure,
-              destination
-            );
+                // ----------- GENERATION DES ACTIVITES -----------
+                if (accommodation) {
+                  activities = await findActivities(
+                    ActivitySlots,
+                    numberOfTravelers,
+                    totalBudget,
+                    arrival,
+                    departure,
+                    destination
+                  );
+                }
+              }
+            }
           }
-        }
-      }
+        })(),
+        timeoutPromise,
+      ]);
+    } catch (error) {
+      return res.json({ error: error.message });
     }
+
     let trip = {
       numberOfTravelers,
       destination,
@@ -160,7 +180,7 @@ router.post("/generate", async (req, res) => {
       nbrOfNights,
       nbrOfActivities: activities.activities.length,
       activities: activities.activities,
-      totalAccomodation: accommodation.totalAccomodation,
+      totalAccommodation: accommodation.totalAccommodation,
       totalTransport: validCombination.totalCost,
       totalActivities: activities.totalActivities,
       total: Number(
