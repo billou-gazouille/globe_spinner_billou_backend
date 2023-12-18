@@ -46,17 +46,25 @@ router.post("/signup", (req, res) => {
 
 router.post("/signin", (req, res) => {
   if (!checkBody(req.body, ["email", "password"])) {
-    res.json({ result: false, error: "Missing or empty fields" });
-    return;
+    return res.json({ result: false, error: "Missing or empty fields" });
   }
 
   console.log("body is OK");
 
   User.findOne({ email: req.body.email }).then((data) => {
     if (data && bcrypt.compareSync(req.body.password, data.password)) {
-      res.json({ result: true, token: data.token });
+      return res.json({
+        result: true,
+        token: data.token,
+        email: data.email,
+        firstname: data.firstName,
+        lastname: data.lastName,
+      });
     } else {
-      res.json({ result: false, error: "User not found or wrong password" });
+      return res.json({
+        result: false,
+        error: "User not found or wrong password",
+      });
     }
   });
 });
@@ -101,8 +109,6 @@ router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
   return res.json({ savedTrip, updateResult });
 });
 
-
-
 // addPaymentInfo
 
 router.post("/:userToken/addPaiyementInfo", async (req, res) => {
@@ -125,20 +131,16 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
 
     await user.save();
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Informations de paiement enregistrées avec succès",
-      });
+    res.status(200).json({
+      success: true,
+      message: "Informations de paiement enregistrées avec succès",
+    });
   } catch (error) {
     console.error(error);
-    res
-      .status(500)
-      .json({
-        success: false,
-        message: "Erreur lors de l'enregistrement des informations de paiement",
-      });
+    res.status(500).json({
+      success: false,
+      message: "Erreur lors de l'enregistrement des informations de paiement",
+    });
   }
 });
 

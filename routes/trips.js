@@ -1,17 +1,20 @@
 var express = require("express");
 var router = express.Router();
 
-//const AccommodationSlot = require("../database/models/accommodationRooms");
-
 const moment = require("moment");
-const { isPointWithinRadius } = require("../modules/checkDistance");
+const getDestination = require("../modules/getDestinations");
+const findTransportSlots = require("../modules/findTransportSlots");
+const findJourney = require("../modules/findJourney");
+const findAccommodation = require("../modules/findAccommodation");
+const findActivities = require("../modules/findActivities");
 
 const Trip = require("../database/models/trips");
+const ActivitySlots = require("../database/models/activities/activitySlots");
 const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
 const TransportSlot = require("../database/models/transport/transportSlots");
 const Destination = require("../database/models/destinations");
 const { tripA, tripB } = require("../exampleTrips");
-let trips = [tripA, tripB];
+let trips = [];
 
 // ROUTE GET POUR REGENERER ACCOMMODATION
 router.get(
@@ -54,246 +57,121 @@ router.get(
 
 router.get("/newTransport", async (req, res) => {});
 
-const calculateDistance = (lat1, lon1, lat2, lon2) => {
-  const R = 6371; // Radius of the Earth in kilometers
-  const dLat = (lat2 - lat1) * (Math.PI / 180);
-  const dLon = (lon2 - lon1) * (Math.PI / 180);
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(lat1 * (Math.PI / 180)) *
-      Math.cos(lat2 * (Math.PI / 180)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const distance = R * c; // Distance in kilometers
-
-  return distance.toFixed(2);
-};
-
-//
 router.post("/generate", async (req, res) => {
   const filters = req.body;
-  //Cherche le lieu de départ (aéroport, gare, etc.) le plus proche de l'adresse de l'utilisateur renseignée + de générer aléatoirement la destination.
-  const destinations = await Destination.find();
-
-  const locations = destinations
-    .map((e) => {
-      return {
-        id: e._id,
-        name: e.name,
-        country: e.country,
-        lat: e.centerLocation.latitude,
-        lon: e.centerLocation.longitude,
-        distance: calculateDistance(
-          e.centerLocation.latitude,
-          e.centerLocation.longitude,
-          filters.lat,
-          filters.lon
-        ),
-      };
-    })
-    .sort((a, b) => a.distance - b.distance); // trie du plus proche au plus lointain
-  const destinationIndex = Math.floor(Math.random() * locations.length) + 1;
-  const destination = locations[destinationIndex];
-  const departureLocation = locations[0];
-  // ----------- fin de la première section -----------
-
-  // ----------- GENERATION DES ALLERS RETOURS -----------
-  const numberOfTravelers = Number(filters.nbrOfTravelers);
-
-  const findTransportSlots = async (
-    departurePlace,
-    arrivalPlace,
-    departureDateRange,
-    numberOfTravelers
-  ) => {
-    return await TransportSlot.aggregate([
-      {
-        $match: {
-          "departure.place": departurePlace,
-          "arrival.place": arrivalPlace,
-          "departure.date": {
-            $gte: departureDateRange.min,
-            $lte: departureDateRange.max,
-          },
-        },
-      },
-      {
-        $lookup: {
-          from: "transport_bases",
-          localField: "transportBase",
-          foreignField: "_id",
-          as: "transportBase",
-        },
-      },
-      {
-        $unwind: "$transportBase",
-      },
-      {
-        $addFields: {
-          totalAvailableSeats: {
-            $sum: [
-              "$firstClass.nbRemainingSeats",
-              "$secondClass.nbRemainingSeats",
-            ],
-          },
-        },
-      },
-      {
-        $match: {
-          totalAvailableSeats: { $gte: numberOfTravelers },
-        },
-      },
-    ]);
-  };
-
-  const departureDateRangeOutbound = {
-    min: moment(filters.departureMinOutbound).toDate(),
-    max: moment(filters.departureMaxOutbound).toDate(),
-  };
-
-  const departureDateRangeInbound = {
-    min: moment(filters.departureMinInbound).toDate(),
-    max: moment(filters.departureMaxInbound).toDate(),
-  };
-
-  const outboundJourneys = await findTransportSlots(
-    departureLocation.id,
-    destination.id,
-    departureDateRangeOutbound,
-    numberOfTravelers
-  );
-
-  const inboundJourneys = await findTransportSlots(
-    destination.id,
-    departureLocation.id,
-    departureDateRangeInbound,
-    numberOfTravelers
-  );
-
   const totalBudget = filters.budget;
-  const validCombinations = [];
+  const numberOfTravelers = Number(filters.nbrOfTravelers);
   const classes = ["firstClass", "secondClass"];
+  let departureLocation;
+  let nbrOfNights;
 
-  for (let outboundClass of classes) {
-    for (let outboundJourney of outboundJourneys) {
-      const outboundPrice = outboundJourney[outboundClass].price;
-      // const outboundSeats =
-      //   outboundJourney.firstClass.nbRemainingSeats +
-      //   outboundJourney.secondClass.nbRemainingSeats;
-      for (let inboundClass of classes) {
-        for (let inboundJourney of inboundJourneys) {
-          const inboundPrice = inboundJourney[inboundClass].price;
-          // const inboundSeats =
-          //   inboundJourney.firstClass.nbRemainingSeats +
-          //   inboundJourney.secondClass.nbRemainingSeats;
+  for (let i = 0; i <= 1; i++) {
+    let destination;
+    let validCombination;
+    let accommodation;
+    let activities;
 
-          const totalCost = outboundPrice + inboundPrice;
+    while (!validCombination || !accommodation || !activities) {
+      // ----------- GENERATION DE LA DESTINATION -----------
 
-          if (totalCost <= totalBudget / 3) {
-            validCombinations.push({
-              outboundJourney: {
-                type: outboundJourney.transportBase.type,
-                class: outboundClass,
-                departure: outboundJourney.departure.date,
-                arrival: outboundJourney.arrival.date,
-                price: outboundPrice.toFixed(2),
-              },
-              inboundJourney: {
-                type: inboundJourney.transportBase.type,
-                class: inboundClass,
-                departure: inboundJourney.departure.date,
-                arrival: inboundJourney.arrival.date,
-                price: inboundPrice.toFixed(2),
-              },
-              totalCost: totalCost.toFixed(2),
-            });
+      destination = (await getDestination(Destination, filters)).destination;
+      departureLocation = (await getDestination(Destination, filters))
+        .departureLocation;
+
+      // ----------- GENERATION DES ALLERS RETOURS -----------
+
+      const departureDateRangeOutbound = {
+        min: moment(filters.departureMinOutbound).toDate(),
+        max: moment(filters.departureMaxOutbound).toDate(),
+      };
+
+      const departureDateRangeInbound = {
+        min: moment(filters.departureMinInbound).toDate(),
+        max: moment(filters.departureMaxInbound).toDate(),
+      };
+      if (destination) {
+        const outboundJourneys = await findTransportSlots(
+          TransportSlot,
+          departureLocation.id,
+          destination.id,
+          departureDateRangeOutbound,
+          numberOfTravelers
+        );
+
+        const inboundJourneys = await findTransportSlots(
+          TransportSlot,
+          destination.id,
+          departureLocation.id,
+          departureDateRangeInbound,
+          numberOfTravelers
+        );
+
+        validCombination = findJourney(
+          classes,
+          outboundJourneys,
+          inboundJourneys,
+          totalBudget
+        );
+
+        // ----------- fin allers retours -----------
+        if (validCombination) {
+          // ----------- GENERATION DU LOGEMENT -----------
+
+          const arrival = moment
+            .utc(validCombination.outboundJourney.arrival)
+            .startOf("day");
+          const departure = moment
+            .utc(validCombination.inboundJourney.departure)
+            .startOf("day");
+
+          nbrOfNights = Math.abs(departure.diff(arrival, "days"));
+
+          accommodation = await findAccommodation(
+            AccommodationRooms,
+            numberOfTravelers,
+            nbrOfNights,
+            validCombination,
+            destination,
+            totalBudget
+          );
+
+          // ----------- GENERATION DES ACTIVITES -----------
+          if (accommodation) {
+            activities = await findActivities(
+              ActivitySlots,
+              numberOfTravelers,
+              totalBudget,
+              arrival,
+              departure,
+              destination
+            );
           }
         }
       }
     }
+    let trip = {
+      numberOfTravelers,
+      destination,
+      outboundJourney: validCombination.outboundJourney,
+      inboundJourney: validCombination.inboundJourney,
+      accommodation: accommodation.accommodation,
+      nbrOfNights,
+      nbrOfActivities: activities.activities.length,
+      activities: activities.activities,
+      totalAccomodation: accommodation.totalAccomodation,
+      totalTransport: validCombination.totalCost,
+      totalActivities: activities.totalActivities,
+      total: Number(
+        (
+          validCombination.totalCost +
+          accommodation.totalAccomodation +
+          activities.totalActivities
+        ).toFixed(2)
+      ),
+    };
+    trips.push(trip);
   }
-  validCombinations.sort((a, b) => a.totalCost - b.totalCost);
-  // ----------- fin allers retours -----------
-
-  // ----------- GENERATION DU LOGEMENT -----------
-  // Check location, Check availability based on transport, check nbr of people, check budget
-  if (validCombinations.length == 0) {
-    return res.json("no journey found");
-  }
-
-  const arrival = moment
-    .utc(validCombinations[0].outboundJourney.arrival)
-    .startOf("day");
-  const departure = moment
-    .utc(validCombinations[0].inboundJourney.departure)
-    .startOf("day");
-
-  const nbrOfNights = Math.abs(departure.diff(arrival, "days"));
-
-  const budgetByNights = totalBudget / 3 / nbrOfNights;
-
-  const accomodations = await AccommodationRooms.aggregate([
-    {
-      $match: {
-        maxNbPeople: { $gte: numberOfTravelers },
-        basePricePerNight: { $lte: budgetByNights },
-        bookings: {
-          $not: {
-            $elemMatch: {
-              from: {
-                $lte: validCombinations[0].outboundJourney.arrival,
-              },
-              to: {
-                $gte: validCombinations[0].inboundJourney.departure,
-              },
-            },
-          },
-        },
-      },
-    },
-    {
-      $lookup: {
-        from: "accommodation_bases",
-        localField: "accommodationBase",
-        foreignField: "_id",
-        as: "accommodationBase",
-      },
-    },
-    {
-      $unwind: "$accommodationBase",
-    },
-    {
-      $addFields: {
-        locationArray: [
-          "$accommodationBase.location.longitude",
-          "$accommodationBase.location.latitude",
-        ],
-      },
-    },
-    {
-      $match: {
-        locationArray: {
-          $geoWithin: {
-            $centerSphere: [[destination.lon, destination.lat], 10 / 6371],
-          },
-        },
-      },
-    },
-  ]);
-
-  if (accomodations.length == 0) {
-    return res.json({ error: "no accomodations found", destination });
-  }
-
-  return res.json({
-    destination,
-    // nbrCombinations: validCombinations.length,
-    // validCombinations,
-    accomodations,
-    nbr: accomodations.length,
-    nbrOfNights,
-  });
+  return res.json(trips);
 });
 
 (module.exports = router), { tripA, tripB };
