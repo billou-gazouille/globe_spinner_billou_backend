@@ -1,26 +1,25 @@
 const mongoose = require("mongoose");
 const ObjectId = mongoose.Schema.Types.ObjectId;
 require("./transportBases");
+require("../destinations");
 
 const transportSlotSchema = new mongoose.Schema({
   transportBase: { type: ObjectId, ref: "transport_bases" },
   departure: {
-    location: String,
+    place: { type: ObjectId, ref: "destinations" },
     date: Date,
   },
   arrival: {
-    location: String,
+    place: { type: ObjectId, ref: "destinations" },
     date: Date,
   },
   firstClass: {
     price: Number,
-    maxNbSeats: Number,
-    availableSeats: [String], // ex: ["23E", "18C", ...]
+    nbRemainingSeats: Number,
   },
   secondClass: {
     price: Number,
-    maxNbSeats: Number,
-    availableSeats: [String], // ex: ["53F", "58D", ...]
+    nbRemainingSeats: Number,
   },
 });
 

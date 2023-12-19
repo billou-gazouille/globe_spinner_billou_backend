@@ -12,11 +12,11 @@ const generateTransportExtra = async () => {
     return TransportExtra.create(obj);
 };
 
-const clearTransportExtra = () => {
+const clearTransportExtras = () => {
     return TransportExtra.deleteMany();
 };
 
 module.exports = { 
     generateTransportExtra,
-    clearTransportExtra,
+    clearTransportExtras,
 };
