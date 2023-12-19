@@ -42,8 +42,8 @@ const findTransportSlots = async (
       $match: {
         totalAvailableSeats: { $gte: numberOfTravelers },
         "transportBase.type": {
-          $in: [types],
-          // $in: types,
+          // $in: [types],
+          $in: types,
         },
       },
     },
