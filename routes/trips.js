@@ -69,7 +69,7 @@ router.post("/generate", async (req, res) => {
   let timeoutPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       reject(new Error("Timeout: Operation took too long."));
-    }, 20000); // 20 seconds timeout
+    }, 30000); // 30 seconds timeout
   });
 
   console.log([types]);
