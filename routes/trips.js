@@ -173,6 +173,7 @@ router.post("/generate", async (req, res) => {
 
     let trip = {
       numberOfTravelers,
+      departureLocation,
       destination,
       outboundJourney: validCombination.outboundJourney,
       inboundJourney: validCombination.inboundJourney,
