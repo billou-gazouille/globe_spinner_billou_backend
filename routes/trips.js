@@ -13,7 +13,6 @@ const ActivitySlots = require("../database/models/activities/activitySlots");
 const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
 const TransportSlot = require("../database/models/transport/transportSlots");
 const Destination = require("../database/models/destinations");
-const { tripA, tripB } = require("../exampleTrips");
 let trips = [];
 
 // ROUTE GET POUR REGENERER ACCOMMODATION
@@ -197,4 +196,5 @@ router.post("/generate", async (req, res) => {
   return res.json(trips);
 });
 
-(module.exports = router), { tripA, tripB };
+module.exports = router;
+module.exports.getTrips = () => trips;
