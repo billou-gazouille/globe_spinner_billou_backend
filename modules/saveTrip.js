@@ -11,4 +11,12 @@ async function saveTrip(req) {
   return { userToken, savedTrip };
 }
 
+async function getSavedTripById(tripId) {
+  const savedTrip = await Trip.findById(tripId);
+  return savedTrip;
+}
+
+
 module.exports = { saveTrip };
+
+
