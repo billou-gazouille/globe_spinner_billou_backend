@@ -158,7 +158,8 @@ router.post("/generate", async (req, res) => {
                     totalBudget,
                     arrival,
                     departure,
-                    destination
+                    destination,
+                    nbrOfNights
                   );
                 }
               }
