@@ -14,6 +14,10 @@ async function saveTrip(req) {
   return { userToken, savedTrip };
 }
 
+function getFormattedTripForDB(trip){
+  
+}
+
 async function getSavedTripById(tripId) {
   const savedTrip = await Trip.findById(tripId);
   return savedTrip;
