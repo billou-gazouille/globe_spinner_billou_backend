@@ -146,7 +146,8 @@ router.post("/generate", async (req, res) => {
                 classes,
                 outboundJourneys,
                 inboundJourneys,
-                totalBudget
+                totalBudget,
+                numberOfTravelers
               );
 
               // ----------- fin allers retours -----------
