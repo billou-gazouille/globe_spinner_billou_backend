@@ -100,7 +100,10 @@ router.post("/:userToken/saveTrip/:tripIndex", async (req, res) => {
     { token: userToken },
     { $push: { savedTrips: savedTrip._id } }
   );
-  return res.json({ savedTrip, updateResult });
+  if (updateResult.modifiedCount <= 0) {
+    return res.json({ res: false });
+  }
+  return res.json({ savedTrip, res: true });
 });
 
 router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {

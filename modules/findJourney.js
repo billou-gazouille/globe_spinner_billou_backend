@@ -27,8 +27,8 @@ const findJourney = (
                 type: outboundJourney.transportBase.type,
                 class: outboundClass,
                 seats: {
-                  from: remainingSeatsOutbound,
-                  to: remainingSeatsOutbound + nbrOfTravelers,
+                  from: Number(remainingSeatsOutbound),
+                  to: Number(remainingSeatsOutbound + nbrOfTravelers),
                 },
                 departure: outboundJourney.departure.date,
                 arrival: outboundJourney.arrival.date,
@@ -39,8 +39,8 @@ const findJourney = (
                 type: inboundJourney.transportBase.type,
                 class: inboundClass,
                 seats: {
-                  from: remainingSeatsInbound,
-                  to: remainingSeatsInbound + nbrOfTravelers,
+                  from: Number(remainingSeatsInbound),
+                  to: Number(remainingSeatsInbound + nbrOfTravelers),
                 },
                 departure: inboundJourney.departure.date,
                 arrival: inboundJourney.arrival.date,
