@@ -10,6 +10,11 @@ const TransportSlot = require("../database/models/transport/transportSlots");
 const ActivitySlots = require("../database/models/activities/activitySlots");
 const AccommodationRooms = require("../database/models/accommodation/accommodationRooms");
 
+const Trip = require('../database/models/trips');
+
+const { getTrips } = require('./trips');
+
+
 router.post("/signup", (req, res) => {
   //console
   if (!checkBody(req.body, ["email", "password", "firstName", "lastName"])) {
@@ -84,14 +89,62 @@ router.get("/:userToken/reservedTrips", (req, res) => {
     });
 });
 
+
 router.get("/:userToken/savedTrips", (req, res) => {
   const token = req.params.userToken;
   User.findOne({ token })
-    .populate("savedTrips") // need to deepen the populate (with object)
-    .then((data) => {
-      return res.json(data.savedTrips);
+    //.populate("savedTrips") // need to deepen the populate (with object)
+    .populate({
+      path    : 'savedTrips',
+      populate: [
+        { path: 'destination' },
+        { path: 'outboundJourney',
+          populate: [
+            { path: 'transportSlot', 
+              populate: [
+                { path: 'transportBase' },
+                { path: 'departure', 
+                  populate: 'place' },
+                { path: 'arrival', 
+                  populate: 'place' }
+              ] },
+            { path: 'transportExtras' }
+          ] 
+        },
+        { path: 'inboundJourney',
+          populate: [
+            { path: 'transportSlot', 
+              populate: [
+                { path: 'transportBase' },
+                { path: 'departure', 
+                  populate: 'place' },
+                { path: 'arrival', 
+                  populate: 'place' }
+              ] },
+            { path: 'transportExtras' }
+          ] 
+        },
+        { path: 'accommodation',
+          populate: [
+            { path: 'accommodationRoom', 
+              populate: 'accommodationBase' }, 
+            { path: 'accommodationExtras' }
+          ] 
+        },
+        { path: 'activities',
+          populate: [
+            { path: 'activitySlot', 
+              populate: 'activityBase' },
+            { path: 'activityExtras' }
+          ] 
+        },
+      ]
+    })
+    .then((user) => {
+      return res.json(user.savedTrips);
     });
 });
+
 
 router.post("/:userToken/saveTrip/:tripIndex", async (req, res) => {
   const { userToken, savedTrip } = await saveTrip(req);
@@ -106,6 +159,44 @@ router.post("/:userToken/saveTrip/:tripIndex", async (req, res) => {
   return res.json({ savedTrip, res: true });
 });
 
+// router.delete("/:userToken/unsaveTripByIndex/:tripIndex", async (req, res) => {
+//   // index is either 0 or 1
+//   const { tripIndex, userToken } = req.params;
+//   const currentTrips = getTrips();
+//   console.log('currentTrips[0]: ', currentTrips[0]);
+//   //const tripId = currentTrips[tripIndex]._id;
+//   const pullQuery = await User.updateOne(
+//     { token: userToken },
+//     { $pull: { savedTrips: tripId } }
+//   );
+//   if (pullQuery.modifiedCount <= 0) {
+//     return res.json({ result: false, error: "Couldn't remove trip from user's saved trips" });
+//   }
+//   const deleteQuery = await Trip.deleteOne({ _id: tripId });
+//   if (deleteQuery.deletedCount <= 0) {
+//     return res.json({ result: false, error: "Couldn't delete trip document" });
+//   }
+//   return res.json({ result: true });
+// });
+
+router.delete("/:userToken/unsaveTripById/:tripId", async (req, res) => {
+  const { tripId, userToken } = req.params;
+  const pullQuery = await User.updateOne(
+    { token: userToken },
+    { $pull: { savedTrips: tripId } }
+  );
+  if (pullQuery.modifiedCount <= 0) {
+    return res.json({ result: false, error: "Couldn't remove trip from user's saved trips" });
+  }
+  const deleteQuery = await Trip.deleteOne({ _id: tripId });
+  if (deleteQuery.deletedCount <= 0) {
+    return res.json({ result: false, error: "Couldn't delete trip document" });
+  }
+  return res.json({ result: true });
+});
+
+
+// pour un trip pas encore enregistré:
 router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
   const { userToken, savedTrip } = await saveTrip(req);
 
@@ -115,6 +206,32 @@ router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
   );
   return res.json({ savedTrip, updateResult });
 });
+
+
+// pour un trip déjà enregistré:
+router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
+  const { tripId } = req.params;
+  const checkTripStillAvailable = async (tripId) => {
+    const trip = await Trip.findById(tripId);
+    // ici on doit vérifier que ce trip est encore disponible (return true/false)
+    // on devrait aussi faire cette vérif dans la route reserveTrip
+    // on pourrait exporter checkTripStillAvailable dans un module
+  };
+  const isStillAvailable = checkTripStillAvailable(tripId);
+  if (!isStillAvailable) {
+    return res.json({ result: false, error: "Trip no longer available" });
+  }
+  // on peut le reserver :
+  const updateResult = await User.updateOne(
+    { token: userToken },
+    { $push: { reservedTrips: tripId } }
+  );
+  if (updateResult.modifiedCount === 0){
+    return res.json({ result: false, error: "Couldn't reserve trip: database error" });
+  }
+  res.json({ result: true });
+});
+
 
 // addPaymentInfo
 
