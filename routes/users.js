@@ -212,7 +212,8 @@ router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
 
 // pour un trip déjà enregistré:
 router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
-  const { tripId } = req.params;
+  const { tripId, userToken } = req.params;
+  
   const checkTripStillAvailable = async (tripId) => {
     const trip = await Trip.findById(tripId);
     // ici on doit vérifier que ce trip est encore disponible (return true/false)
@@ -233,6 +234,15 @@ router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
     return res.json({ result: false, error: "Couldn't reserve trip: database error" });
   }
   res.json({ result: true });
+  
+  // const updateResult = await User.updateOne(
+  //   { token: userToken },
+  //   { $push: { reservedTrips: tripId } }
+  // );
+  // if (updateResult.modifiedCount === 0){
+  //   return res.json({ result: false, error: "Couldn't reserve trip: database error" });
+  // }
+  // res.json({ result: true });
 });
 
 
