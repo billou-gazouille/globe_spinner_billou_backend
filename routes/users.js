@@ -36,7 +36,13 @@ router.post("/signup", (req, res) => {
         token: uid2(32),
         savedTrips: [],
         reservedTrips: [],
-        bankCardInfo: {},   // user fills this later when booking a trip
+        // user fills this later when booking a trip:
+        bankCardInfo: {
+          nameOnCard: null,
+          cardNumber: null,
+          expiryDate: null,
+          cvv: null
+        },
       });
 
       newUser.save().then((newDoc) => {
