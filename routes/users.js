@@ -220,7 +220,7 @@ router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
     // on pourrait exporter checkTripStillAvailable dans un module
     return true; // change this
   };
-  const isStillAvailable = checkTripStillAvailable(tripId);
+  const isStillAvailable = await checkTripStillAvailable(tripId);
   if (!isStillAvailable) {
     return res.json({ result: false, error: "Trip no longer available" });
   }
