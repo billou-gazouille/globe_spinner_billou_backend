@@ -85,9 +85,55 @@ router.post("/signin", (req, res) => {
 router.get("/:userToken/reservedTrips", (req, res) => {
   const token = req.params.userToken;
   User.findOne({ token })
-    .populate("reservedTrips")
-    .then((data) => {
-      return res.json(data.reservedTrips);
+    //.populate("savedTrips") // need to deepen the populate (with object)
+    .populate({
+      path    : 'reservedTrips',
+      populate: [
+        { path: 'destination' },
+        { path: 'outboundJourney',
+          populate: [
+            { path: 'transportSlot', 
+              populate: [
+                { path: 'transportBase' },
+                { path: 'departure', 
+                  populate: 'place' },
+                { path: 'arrival', 
+                  populate: 'place' }
+              ] },
+            { path: 'transportExtras' }
+          ] 
+        },
+        { path: 'inboundJourney',
+          populate: [
+            { path: 'transportSlot', 
+              populate: [
+                { path: 'transportBase' },
+                { path: 'departure', 
+                  populate: 'place' },
+                { path: 'arrival', 
+                  populate: 'place' }
+              ] },
+            { path: 'transportExtras' }
+          ] 
+        },
+        { path: 'accommodation',
+          populate: [
+            { path: 'accommodationRoom', 
+              populate: 'accommodationBase' }, 
+            { path: 'accommodationExtras' }
+          ] 
+        },
+        { path: 'activities',
+          populate: [
+            { path: 'activitySlot', 
+              populate: 'activityBase' },
+            { path: 'activityExtras' }
+          ] 
+        },
+      ]
+    })
+    .then((user) => {
+      return res.json(user.savedTrips);
     });
 });
 
