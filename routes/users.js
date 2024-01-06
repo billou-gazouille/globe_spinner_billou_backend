@@ -240,7 +240,7 @@ router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
 router.post("/:userToken/addPaiyementInfo", async (req, res) => {
   try {
     const token = req.params.userToken;
-    const user = await User.find({token});
+    const user = await User.findOne({token});
 
     const { nameOnCard, cardNumber, expiryDate, cvv } = req.body;
 
