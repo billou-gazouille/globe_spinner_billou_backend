@@ -246,7 +246,7 @@ router.delete("/:userToken/unsaveTripById/:tripId", async (req, res) => {
 
 // pour un trip pas encore enregistré:
 router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
-  const { savedTrip } = await saveTrip(req);   // uses tripIndex
+  const { savedTrip } = await saveTrip(req);   // uses tripIndex to save trip
   const { userToken } = req.params;
   
   const checkTripStillAvailable = async (tripId) => {
@@ -263,7 +263,7 @@ router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
   // on peut le reserver :
   const updateResult = await User.updateOne(
     { token: userToken },
-    { $pull: { savedTrips: savedTrip._id }, $push: { reservedTrips: savedTrip._id } }
+    { $push: { reservedTrips: savedTrip._id } }
   );
   if (updateResult.modifiedCount === 0){
     return res.json({ result: false, error: "Couldn't reserve trip: database error" });
