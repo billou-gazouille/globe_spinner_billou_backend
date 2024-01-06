@@ -246,13 +246,28 @@ router.delete("/:userToken/unsaveTripById/:tripId", async (req, res) => {
 
 // pour un trip pas encore enregistré:
 router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
-  const { userToken, savedTrip } = await saveTrip(req);
-
+  const { userToken, savedTrip } = await saveTrip(req);   // uses tripIndex
+  
+  const checkTripStillAvailable = async (tripId) => {
+    const trip = await Trip.findById(tripId);
+    // ici on doit vérifier que ce trip est encore disponible (return true/false)
+    // on devrait aussi faire cette vérif dans la route reserveTrip
+    // on pourrait exporter checkTripStillAvailable dans un module
+    return true; // change this
+  };
+  const isStillAvailable = await checkTripStillAvailable(savedTrip._id);
+  if (!isStillAvailable) {
+    return res.json({ result: false, error: "Trip no longer available" });
+  }
+  // on peut le reserver :
   const updateResult = await User.updateOne(
     { token: userToken },
-    { $push: { reservedTrips: savedTrip._id } }
+    { $pull: { savedTrips: savedTrip._id }, $push: { reservedTrips: savedTrip._id } }
   );
-  return res.json({ savedTrip, updateResult });
+  if (updateResult.modifiedCount === 0){
+    return res.json({ result: false, error: "Couldn't reserve trip: database error" });
+  }
+  res.json({ result: true });
 });
 
 
