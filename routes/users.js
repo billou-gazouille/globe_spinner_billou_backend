@@ -230,7 +230,7 @@ router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
     { token: userToken },
     { $pull: { savedTrips: tripId }, $push: { reservedTrips: tripId } }
   );
-  if (updateResult.modifiedCount < 2){
+  if (updateResult.modifiedCount === 0){
     return res.json({ result: false, error: "Couldn't reserve trip: database error" });
   }
   res.json({ result: true });
