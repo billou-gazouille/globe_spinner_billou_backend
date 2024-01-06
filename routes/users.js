@@ -133,7 +133,7 @@ router.get("/:userToken/reservedTrips", (req, res) => {
       ]
     })
     .then((user) => {
-      return res.json(user.savedTrips);
+      return res.json(user.reservedTrips);
     });
 });
 
