@@ -36,11 +36,7 @@ router.post("/signup", (req, res) => {
         token: uid2(32),
         savedTrips: [],
         reservedTrips: [],
-        bankCard: {
-          cardNumber: "",
-          expiryDate: new Date("9999-12-31T23:59:59"),
-          CVV: String,
-        },
+        bankCardInfo: {},   // user fills this later when booking a trip
       });
 
       newUser.save().then((newDoc) => {
