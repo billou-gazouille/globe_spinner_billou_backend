@@ -218,6 +218,7 @@ router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
     // ici on doit vérifier que ce trip est encore disponible (return true/false)
     // on devrait aussi faire cette vérif dans la route reserveTrip
     // on pourrait exporter checkTripStillAvailable dans un module
+    return true; // change this
   };
   const isStillAvailable = checkTripStillAvailable(tripId);
   if (!isStillAvailable) {
