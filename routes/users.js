@@ -228,7 +228,7 @@ router.post("/:userToken/reserveTripById/:tripId", async (req, res) => {
   // on peut le reserver :
   const updateResult = await User.updateOne(
     { token: userToken },
-    { $push: { reservedTrips: tripId } }
+    { $pull: { savedTrips: tripId }, $push: { reservedTrips: tripId } }
   );
   if (updateResult.modifiedCount === 0){
     return res.json({ result: false, error: "Couldn't reserve trip: database error" });
