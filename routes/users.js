@@ -270,6 +270,14 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
   }
 });
 
+router.get("/:userToken/bankCardInfo", async (req, res) => {
+  const token = req.params.userToken; 
+  const user = await User.findOne({token});
+  if (!user) return res.json({ result: false, message: "Utilisateur non trouvé" });
+  res.json({bankCardInfo: user.bankCardInfo});
+});
+
+
 router.post("/:userToken/resetPassword", async (req, res) => {
   if (!checkBody(req.body, ["newPassword"])) {
     res.json({ result: false, error: "Missing or empty fields" });
