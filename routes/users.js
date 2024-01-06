@@ -242,7 +242,7 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
     const user = await User.findById(userToken);
 
     const userToken = req.params.userToken;
-    const { nameOnCard, cardNumber, expiryDate, code } = req.body;
+    const { nameOnCard, cardNumber, expiryDate, cvv } = req.body;
 
     if (!user) {
       return res
@@ -252,8 +252,8 @@ router.post("/:userToken/addPaiyementInfo", async (req, res) => {
 
     user.bankCardInfo.nameOnCard = nameOnCard;
     user.bankCardInfo.cardNumber = cardNumber;
-    user.bankCardInfo.expiryDate = new Date(expiryDate);
-    user.bankCardInfo.code = code;
+    user.bankCardInfo.expiryDate = expiryDate;
+    user.bankCardInfo.cvv = cvv;
 
     await user.save();
 
