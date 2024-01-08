@@ -16,7 +16,6 @@ const journeySchema = new mongoose.Schema({
 });
 
 const tripSchema = new mongoose.Schema({
-  user: { type: ObjectId, ref: "users" },
   nbOfTravelers: Number,
   destination: { type: ObjectId, ref: "destinations" },
   outboundJourney: journeySchema, // l'aller
