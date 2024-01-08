@@ -1,23 +1,17 @@
 const Trip = require("../database/models/trips");
-const User = require("../database/models/users");
-// const { tripA, tripB } = require("../exampleTrips");
-// let trips = [tripA, tripB];
+
 const { getTrips } = require("../routes/trips");
 
-async function saveTrip(req) {
-  const selectedTripIndex = Number(req.params.tripIndex);
-  const userToken = req.params.userToken;
-
+async function saveTrip(tripIndex) {
+  const selectedTripIndex = Number(tripIndex);
   const trips = getTrips();
-  console.log("###################", trips);
-  const user = await User.find({ token: userToken });
-  const tripForDB = getFormattedTripForDB(trips[selectedTripIndex], user._id);
+  const tripForDB = getFormattedTripForDB(trips[selectedTripIndex]);
   const newTrip = new Trip(tripForDB);
   const savedTrip = await newTrip.save();
-  return { userToken, savedTrip };
+  return savedTrip;
 }
 
-function getFormattedTripForDB(trip, userId) {
+function getFormattedTripForDB(trip) {
   const activitiesDB = trip.activities.map((act) => {
     return {
       activitySlot: act._id, // activity slot id
@@ -26,7 +20,6 @@ function getFormattedTripForDB(trip, userId) {
   });
 
   return {
-    user: userId,
     nbOfTravelers: trip.numberOfTravelers,
     destination: trip.destination.id,
     outboundJourney: {

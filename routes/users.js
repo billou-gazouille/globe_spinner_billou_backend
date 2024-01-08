@@ -195,7 +195,8 @@ router.get("/:userToken/savedTrips", (req, res) => {
 
 
 router.post("/:userToken/saveTrip/:tripIndex", async (req, res) => {
-  const { userToken, savedTrip } = await saveTrip(req);
+  const { userToken, tripIndex } = req.params;
+  const savedTrip = await saveTrip(tripIndex);
 
   const updateResult = await User.updateOne(
     { token: userToken },
@@ -246,8 +247,8 @@ router.delete("/:userToken/unsaveTripById/:tripId", async (req, res) => {
 
 // pour un trip pas encore enregistré:
 router.post("/:userToken/reserveTrip/:tripIndex", async (req, res) => {
-  const { savedTrip } = await saveTrip(req);   // uses tripIndex to save trip
-  const { userToken } = req.params;
+  const { userToken, tripIndex } = req.params;
+  const savedTrip = await saveTrip(tripIndex);
   
   const checkTripStillAvailable = async (tripId) => {
     const trip = await Trip.findById(tripId);
